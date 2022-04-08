@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="ADR-rp-rgI">
-                                <rect key="frame" x="87" y="182" width="217" height="386"/>
+                                <rect key="frame" x="99" y="162" width="217" height="386"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instagram Black Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Fyr-Si-cdV">
                                         <rect key="frame" x="0.0" y="0.0" width="217" height="50"/>
@@ -32,7 +32,7 @@
                                         <rect key="frame" x="0.0" y="154" width="217" height="34"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxF-3S-SXs">
                                         <rect key="frame" x="0.0" y="223" width="217" height="31"/>
@@ -57,6 +57,9 @@
                                                 <rect key="frame" x="100.5" y="0.0" width="116.5" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="가입하기"/>
+                                                <connections>
+                                                    <action selector="gotoSignUpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yhV-HQ-LPM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -106,6 +109,9 @@
                                         <rect key="frame" x="0.0" y="263.5" width="299" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="다음"/>
+                                        <connections>
+                                            <action selector="gotoPWClicked:" destination="dv1-sE-E5a" eventType="touchUpInside" id="Okb-Hv-MMh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -118,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="1021.7391304347827" y="134.59821428571428"/>
         </scene>
-        <!--Ign Up Pw-->
+        <!--Sign Up Pw-->
         <scene sceneID="Rbu-Kv-40A">
             <objects>
-                <viewController storyboardIdentifier="SIgnUpPw" id="4yf-d9-MJn" customClass="SIgnUpPw" customModule="Instagram_Clone_Coding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpPw" id="4yf-d9-MJn" customClass="SignUpPw" customModule="Instagram_Clone_Coding" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Wh-Ke-zKu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,12 +152,15 @@
                                         <rect key="frame" x="0.0" y="184.5" width="299" height="34"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26u-YX-zUo">
                                         <rect key="frame" x="0.0" y="269.5" width="299" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="다음"/>
+                                        <connections>
+                                            <action selector="gotoWelcomeClicked:" destination="4yf-d9-MJn" eventType="touchUpInside" id="AzZ-o4-oqZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -193,6 +202,9 @@
                                         <rect key="frame" x="0.0" y="224" width="299" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="완료하기"/>
+                                        <connections>
+                                            <action selector="gotoLoginClicked:" destination="olk-Ua-VuG" eventType="touchUpInside" id="drk-dU-cYy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

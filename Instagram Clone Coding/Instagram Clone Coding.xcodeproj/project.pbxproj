@@ -15,7 +15,7 @@
 		4DF4D39227FD5CEF00405AB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DF4D39027FD5CEF00405AB4 /* LaunchScreen.storyboard */; };
 		4DF4D39A27FD5D2E00405AB4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39927FD5D2E00405AB4 /* Login.swift */; };
 		4DF4D39C27FD5D6700405AB4 /* SignUpName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39B27FD5D6700405AB4 /* SignUpName.swift */; };
-		4DF4D39E27FD5F9E00405AB4 /* SIgnUpPw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39D27FD5F9E00405AB4 /* SIgnUpPw.swift */; };
+		4DF4D39E27FD5F9E00405AB4 /* SignUpPw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39D27FD5F9E00405AB4 /* SignUpPw.swift */; };
 		4DF4D3A027FD5FB600405AB4 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39F27FD5FB600405AB4 /* Welcome.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		4DF4D39327FD5CEF00405AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DF4D39927FD5D2E00405AB4 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		4DF4D39B27FD5D6700405AB4 /* SignUpName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpName.swift; sourceTree = "<group>"; };
-		4DF4D39D27FD5F9E00405AB4 /* SIgnUpPw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIgnUpPw.swift; sourceTree = "<group>"; };
+		4DF4D39D27FD5F9E00405AB4 /* SignUpPw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPw.swift; sourceTree = "<group>"; };
 		4DF4D39F27FD5FB600405AB4 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +73,7 @@
 				4DF4D39327FD5CEF00405AB4 /* Info.plist */,
 				4DF4D39B27FD5D6700405AB4 /* SignUpName.swift */,
 				4DF4D39927FD5D2E00405AB4 /* Login.swift */,
-				4DF4D39D27FD5F9E00405AB4 /* SIgnUpPw.swift */,
+				4DF4D39D27FD5F9E00405AB4 /* SignUpPw.swift */,
 				4DF4D39F27FD5FB600405AB4 /* Welcome.swift */,
 			);
 			path = "Instagram Clone Coding";
@@ -154,7 +154,7 @@
 				4DF4D38627FD5CEA00405AB4 /* AppDelegate.swift in Sources */,
 				4DF4D38827FD5CEA00405AB4 /* SceneDelegate.swift in Sources */,
 				4DF4D39C27FD5D6700405AB4 /* SignUpName.swift in Sources */,
-				4DF4D39E27FD5F9E00405AB4 /* SIgnUpPw.swift in Sources */,
+				4DF4D39E27FD5F9E00405AB4 /* SignUpPw.swift in Sources */,
 				4DF4D39A27FD5D2E00405AB4 /* Login.swift in Sources */,
 				4DF4D3A027FD5FB600405AB4 /* Welcome.swift in Sources */,
 			);

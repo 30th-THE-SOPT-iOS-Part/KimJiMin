@@ -16,6 +16,11 @@ class Welcome: UIViewController {
     }
     
 
+    @IBAction func gotoLoginClicked(_ sender: Any) {
+        guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
+        self.view.window?.rootViewController?.dismiss(animated: false, completion:{
+            presentingVC.popToRootViewController(animated: true)})
+    }
     /*
     // MARK: - Navigation
 

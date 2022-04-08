@@ -16,6 +16,11 @@ class Login: UIViewController {
     }
     
 
+    @IBAction func gotoSignUpClicked(_ sender: Any) {
+        guard let signUpNameVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpName") as?SignUpName else {return}
+        
+        self.navigationController?.pushViewController(signUpNameVC, animated: true)
+    }
     /*
     // MARK: - Navigation
 

@@ -16,6 +16,11 @@ class SignUpName: UIViewController {
     }
     
 
+    @IBAction func gotoPWClicked(_ sender: Any) {
+        guard let signUpPwVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpPw")as?SignUpPw else {return}
+        
+        self.navigationController?.pushViewController(signUpPwVC, animated: true)
+    }
     /*
     // MARK: - Navigation
 
