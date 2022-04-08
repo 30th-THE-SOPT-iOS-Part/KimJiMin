@@ -20,7 +20,7 @@
                                 <rect key="frame" x="99" y="124" width="217" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호, 사용자 이름 또는 이메일" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NdL-27-QN0">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호, 사용자 이름 또는 이메일" textAlignment="natural" minimumFontSize="17" background="password shown eye icon" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NdL-27-QN0">
                                 <rect key="frame" x="74" y="213" width="266" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -270,6 +270,7 @@
     <resources>
         <image name="Instagram Black Logo" width="175" height="50"/>
         <image name="password hidden eye icon" width="20" height="20"/>
+        <image name="password shown eye icon" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
