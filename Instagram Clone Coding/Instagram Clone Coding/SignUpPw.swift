@@ -13,6 +13,7 @@ class SignUpPw: UIViewController {
     
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var pwSecureButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,12 @@ class SignUpPw: UIViewController {
         welcomeVC.modalPresentationStyle = .fullScreen
         welcomeVC.name = name
         self.present(welcomeVC,animated: true,completion: nil)
+    }
+    
+    @IBAction func toggleSecurityMode(_ sender: Any) {
+        passwordInput.isSecureTextEntry.toggle()
+        let imageName = passwordInput.isSecureTextEntry ? "password hidden eye icon" : "password shown eye icon"
+        pwSecureButton.setImage(UIImage(named: imageName), for: .normal)
     }
     
     private func setButtonState(){

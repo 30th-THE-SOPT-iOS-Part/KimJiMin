@@ -75,6 +75,17 @@
                                     <action selector="gotoSignUpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yhV-HQ-LPM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Tm-hd-eDa">
+                                <rect key="frame" x="293" y="264" width="23" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="password hidden eye icon" title="">
+                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="toggleSecurityMode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yDf-mu-0dD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -84,6 +95,7 @@
                         <outlet property="gotoWelcomeButton" destination="ECW-KM-fzu" id="jbh-QE-sYh"/>
                         <outlet property="nameInput" destination="NdL-27-QN0" id="AJM-ZW-aUa"/>
                         <outlet property="passwordInput" destination="XVR-Wn-Oxx" id="u3I-5p-gPG"/>
+                        <outlet property="pwSecureButton" destination="0Tm-hd-eDa" id="IaM-rO-i0E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -191,6 +203,18 @@
                                     <action selector="gotoWelcomeClicked:" destination="4yf-d9-MJn" eventType="touchUpInside" id="AzZ-o4-oqZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUw-AN-63D">
+                                <rect key="frame" x="308" y="254" width="28" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="password hidden eye icon" title="">
+                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="toggleSecurityMode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2GE-Gf-nmx"/>
+                                    <action selector="toggleSecurityMode:" destination="4yf-d9-MJn" eventType="touchUpInside" id="H64-UZ-QU6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7TY-rz-kud"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -198,6 +222,7 @@
                     <connections>
                         <outlet property="nextButton" destination="26u-YX-zUo" id="7II-eP-KhT"/>
                         <outlet property="passwordInput" destination="9qG-te-iHk" id="xNK-tf-x9E"/>
+                        <outlet property="pwSecureButton" destination="aUw-AN-63D" id="W8A-da-zGg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ky-1i-eeh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
