@@ -9,26 +9,27 @@ import UIKit
 
 class Welcome: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    var name: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setName()
     }
     
-
     @IBAction func gotoLoginClicked(_ sender: Any) {
         guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
         self.view.window?.rootViewController?.dismiss(animated: false, completion:{
             presentingVC.popToRootViewController(animated: true)})
+        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func setName(){
+        if let name = name {
+            nameLabel.text = "\(name)님 Instagram에 오신 것을 환영합니다"
+            nameLabel.sizeToFit()
+        }
     }
-    */
 
 }
