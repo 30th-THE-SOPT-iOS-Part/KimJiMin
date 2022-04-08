@@ -11,11 +11,18 @@ class SignUpPw: UIViewController {
     
     var name: String?
     
+    @IBOutlet weak var passwordInput: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setButtonState()
     }
     
-
+    @IBAction func passwordEdited(_ sender: Any) {
+        setButtonState()
+    }
+    
     @IBAction func gotoWelcomeClicked(_ sender: Any) {
         guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Welcome")as?Welcome else {return}
         welcomeVC.modalTransitionStyle = .crossDissolve
@@ -24,5 +31,12 @@ class SignUpPw: UIViewController {
         self.present(welcomeVC,animated: true,completion: nil)
     }
     
+    private func setButtonState(){
+        if (passwordInput.hasText) {
+            nextButton.isEnabled = true
+        }else{
+            nextButton.isEnabled = false
+        }
+    }
 
 }

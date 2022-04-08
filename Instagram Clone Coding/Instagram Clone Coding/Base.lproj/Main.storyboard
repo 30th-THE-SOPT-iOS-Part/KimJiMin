@@ -26,6 +26,9 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameEdited:" destination="BYZ-38-t0r" eventType="editingChanged" id="dqO-69-qHu"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" background="password hidden eye icon" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XVR-Wn-Oxx">
                                 <rect key="frame" x="74" y="264" width="266" height="34"/>
@@ -33,6 +36,9 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="passwordEdited:" destination="BYZ-38-t0r" eventType="editingChanged" id="zPT-v8-MWP"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxF-3S-SXs">
                                 <rect key="frame" x="203" y="306" width="137" height="31"/>
@@ -75,7 +81,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="IqO-Kr-IqY"/>
                     <connections>
+                        <outlet property="gotoWelcomeButton" destination="ECW-KM-fzu" id="jbh-QE-sYh"/>
                         <outlet property="nameInput" destination="NdL-27-QN0" id="AJM-ZW-aUa"/>
+                        <outlet property="passwordInput" destination="XVR-Wn-Oxx" id="u3I-5p-gPG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -111,6 +119,9 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameEdited:" destination="dv1-sE-E5a" eventType="editingChanged" id="Dfp-na-ZVf"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mh4-dF-zmq">
                                 <rect key="frame" x="58" y="304" width="299" height="31"/>
@@ -127,6 +138,7 @@
                     </view>
                     <connections>
                         <outlet property="nameInput" destination="ued-kw-5vh" id="2P0-RA-qys"/>
+                        <outlet property="nextButton" destination="Mh4-dF-zmq" id="RCr-dp-ei2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UEm-JK-mbv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -166,6 +178,9 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="passwordEdited:" destination="4yf-d9-MJn" eventType="editingChanged" id="9SQ-sO-I10"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26u-YX-zUo">
                                 <rect key="frame" x="58" y="308" width="298" height="31"/>
@@ -180,6 +195,10 @@
                         <viewLayoutGuide key="safeArea" id="7TY-rz-kud"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="26u-YX-zUo" id="7II-eP-KhT"/>
+                        <outlet property="passwordInput" destination="9qG-te-iHk" id="xNK-tf-x9E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ky-1i-eeh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
