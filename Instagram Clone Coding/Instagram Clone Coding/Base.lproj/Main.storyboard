@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Login" id="BYZ-38-t0r" customClass="Login" customModule="Instagram_Clone_Coding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginVC" customModule="Instagram_Clone_Coding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="400.00000000000006" y="134.59821428571428"/>
         </scene>
-        <!--Sign Up Name-->
+        <!--Sign Up NameVC-->
         <scene sceneID="hVM-rX-cUV">
             <objects>
-                <viewController storyboardIdentifier="SignUpName" id="dv1-sE-E5a" customClass="SignUpName" customModule="Instagram_Clone_Coding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpNameVC" id="dv1-sE-E5a" customClass="SignUpNameVC" customModule="Instagram_Clone_Coding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zsz-Vi-MGY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,10 +148,10 @@
             </objects>
             <point key="canvasLocation" x="1021.7391304347827" y="134.59821428571428"/>
         </scene>
-        <!--Sign Up Pw-->
+        <!--Sign Up PwVC-->
         <scene sceneID="Rbu-Kv-40A">
             <objects>
-                <viewController storyboardIdentifier="SignUpPw" id="4yf-d9-MJn" customClass="SignUpPw" customModule="Instagram_Clone_Coding" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpPwVC" id="4yf-d9-MJn" customClass="SignUpPwVC" customModule="Instagram_Clone_Coding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Wh-Ke-zKu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,10 +217,10 @@
             </objects>
             <point key="canvasLocation" x="1637.68115942029" y="134.59821428571428"/>
         </scene>
-        <!--Welcome-->
+        <!--WelcomeVC-->
         <scene sceneID="EyH-ll-fQ9">
             <objects>
-                <viewController storyboardIdentifier="Welcome" id="olk-Ua-VuG" customClass="Welcome" customModule="Instagram_Clone_Coding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeVC" id="olk-Ua-VuG" customClass="WelcomeVC" customModule="Instagram_Clone_Coding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tWA-8c-vDW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

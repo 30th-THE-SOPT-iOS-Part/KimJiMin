@@ -13,10 +13,10 @@
 		4DF4D38D27FD5CEA00405AB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DF4D38B27FD5CEA00405AB4 /* Main.storyboard */; };
 		4DF4D38F27FD5CEF00405AB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF4D38E27FD5CEF00405AB4 /* Assets.xcassets */; };
 		4DF4D39227FD5CEF00405AB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DF4D39027FD5CEF00405AB4 /* LaunchScreen.storyboard */; };
-		4DF4D39A27FD5D2E00405AB4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39927FD5D2E00405AB4 /* Login.swift */; };
-		4DF4D39C27FD5D6700405AB4 /* SignUpName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39B27FD5D6700405AB4 /* SignUpName.swift */; };
-		4DF4D39E27FD5F9E00405AB4 /* SignUpPw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39D27FD5F9E00405AB4 /* SignUpPw.swift */; };
-		4DF4D3A027FD5FB600405AB4 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39F27FD5FB600405AB4 /* Welcome.swift */; };
+		4DF4D39A27FD5D2E00405AB4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39927FD5D2E00405AB4 /* LoginVC.swift */; };
+		4DF4D39C27FD5D6700405AB4 /* SignUpNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39B27FD5D6700405AB4 /* SignUpNameVC.swift */; };
+		4DF4D39E27FD5F9E00405AB4 /* SignUpPwVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39D27FD5F9E00405AB4 /* SignUpPwVC.swift */; };
+		4DF4D3A027FD5FB600405AB4 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39F27FD5FB600405AB4 /* WelcomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +28,10 @@
 		4DF4D38E27FD5CEF00405AB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DF4D39127FD5CEF00405AB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DF4D39327FD5CEF00405AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DF4D39927FD5D2E00405AB4 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		4DF4D39B27FD5D6700405AB4 /* SignUpName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpName.swift; sourceTree = "<group>"; };
-		4DF4D39D27FD5F9E00405AB4 /* SignUpPw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPw.swift; sourceTree = "<group>"; };
-		4DF4D39F27FD5FB600405AB4 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		4DF4D39927FD5D2E00405AB4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		4DF4D39B27FD5D6700405AB4 /* SignUpNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameVC.swift; sourceTree = "<group>"; };
+		4DF4D39D27FD5F9E00405AB4 /* SignUpPwVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPwVC.swift; sourceTree = "<group>"; };
+		4DF4D39F27FD5FB600405AB4 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +71,10 @@
 				4DF4D38E27FD5CEF00405AB4 /* Assets.xcassets */,
 				4DF4D39027FD5CEF00405AB4 /* LaunchScreen.storyboard */,
 				4DF4D39327FD5CEF00405AB4 /* Info.plist */,
-				4DF4D39B27FD5D6700405AB4 /* SignUpName.swift */,
-				4DF4D39927FD5D2E00405AB4 /* Login.swift */,
-				4DF4D39D27FD5F9E00405AB4 /* SignUpPw.swift */,
-				4DF4D39F27FD5FB600405AB4 /* Welcome.swift */,
+				4DF4D39B27FD5D6700405AB4 /* SignUpNameVC.swift */,
+				4DF4D39927FD5D2E00405AB4 /* LoginVC.swift */,
+				4DF4D39D27FD5F9E00405AB4 /* SignUpPwVC.swift */,
+				4DF4D39F27FD5FB600405AB4 /* WelcomeVC.swift */,
 			);
 			path = "Instagram Clone Coding";
 			sourceTree = "<group>";
@@ -153,10 +153,10 @@
 				4DF4D38A27FD5CEA00405AB4 /* ViewController.swift in Sources */,
 				4DF4D38627FD5CEA00405AB4 /* AppDelegate.swift in Sources */,
 				4DF4D38827FD5CEA00405AB4 /* SceneDelegate.swift in Sources */,
-				4DF4D39C27FD5D6700405AB4 /* SignUpName.swift in Sources */,
-				4DF4D39E27FD5F9E00405AB4 /* SignUpPw.swift in Sources */,
-				4DF4D39A27FD5D2E00405AB4 /* Login.swift in Sources */,
-				4DF4D3A027FD5FB600405AB4 /* Welcome.swift in Sources */,
+				4DF4D39C27FD5D6700405AB4 /* SignUpNameVC.swift in Sources */,
+				4DF4D39E27FD5F9E00405AB4 /* SignUpPwVC.swift in Sources */,
+				4DF4D39A27FD5D2E00405AB4 /* LoginVC.swift in Sources */,
+				4DF4D3A027FD5FB600405AB4 /* WelcomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

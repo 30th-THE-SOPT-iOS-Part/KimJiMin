@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpPw: UIViewController {
+class SignUpPwVC: UIViewController {
     
     var name: String?
     
@@ -21,7 +21,7 @@ class SignUpPw: UIViewController {
     }
     
     @IBAction func gotoWelcomeClicked(_ sender: Any) {
-        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Welcome")as?Welcome else {return}
+        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as?WelcomeVC else {return}
         welcomeVC.modalTransitionStyle = .crossDissolve
         welcomeVC.modalPresentationStyle = .fullScreen
         welcomeVC.name = name
