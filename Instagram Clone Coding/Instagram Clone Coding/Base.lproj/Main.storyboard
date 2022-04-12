@@ -26,9 +26,6 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="nameEdited:" destination="BYZ-38-t0r" eventType="editingChanged" id="dqO-69-qHu"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" background="password hidden eye icon" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XVR-Wn-Oxx">
                                 <rect key="frame" x="74" y="264" width="266" height="34"/>
@@ -36,9 +33,6 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <connections>
-                                    <action selector="passwordEdited:" destination="BYZ-38-t0r" eventType="editingChanged" id="zPT-v8-MWP"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxF-3S-SXs">
                                 <rect key="frame" x="203" y="306" width="137" height="31"/>
@@ -48,7 +42,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECW-KM-fzu">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECW-KM-fzu">
                                 <rect key="frame" x="74" y="373" width="266" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -131,11 +125,8 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="nameEdited:" destination="dv1-sE-E5a" eventType="editingChanged" id="Dfp-na-ZVf"/>
-                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mh4-dF-zmq">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mh4-dF-zmq">
                                 <rect key="frame" x="58" y="304" width="299" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -190,11 +181,8 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <connections>
-                                    <action selector="passwordEdited:" destination="4yf-d9-MJn" eventType="editingChanged" id="9SQ-sO-I10"/>
-                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26u-YX-zUo">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26u-YX-zUo">
                                 <rect key="frame" x="58" y="308" width="298" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>

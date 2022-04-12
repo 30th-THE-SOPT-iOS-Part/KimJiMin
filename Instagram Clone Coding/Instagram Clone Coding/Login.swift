@@ -16,7 +16,7 @@ class Login: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setButtonState()
+        addTargetTextField()
     }
     
     @IBAction func gotoWelcomeClicked(_ sender: Any) {
@@ -35,25 +35,18 @@ class Login: UIViewController {
         self.navigationController?.pushViewController(signUpNameVC, animated: true)
     }
     
-    @IBAction func nameEdited(_ sender: Any) {
-        setButtonState()
-    }
-    
-    @IBAction func passwordEdited(_ sender: Any) {
-        setButtonState()
-    }
-    
     @IBAction func toggleSecurityMode(_ sender: Any) {
         passwordInput.isSecureTextEntry.toggle()
         let imageName = passwordInput.isSecureTextEntry ? "password hidden eye icon" : "password shown eye icon"
         pwSecureButton.setImage(UIImage(named: imageName), for: .normal)
     }
     
-    private func setButtonState(){
-        if (nameInput.hasText && passwordInput.hasText ) {
-            gotoWelcomeButton.isEnabled = true
-        }else{
-            gotoWelcomeButton.isEnabled = false
-        }
+    func addTargetTextField() {
+        self.nameInput.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
+        self.passwordInput.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
+    }
+    
+    @objc func textFieldDidChange(_ sender:Any?) -> Void {
+        gotoWelcomeButton.isEnabled = nameInput.hasText && passwordInput.hasText
     }
 }

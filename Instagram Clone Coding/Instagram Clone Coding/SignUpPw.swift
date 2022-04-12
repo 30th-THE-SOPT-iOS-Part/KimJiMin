@@ -17,11 +17,7 @@ class SignUpPw: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setButtonState()
-    }
-    
-    @IBAction func passwordEdited(_ sender: Any) {
-        setButtonState()
+        addTargetTextField()
     }
     
     @IBAction func gotoWelcomeClicked(_ sender: Any) {
@@ -38,12 +34,11 @@ class SignUpPw: UIViewController {
         pwSecureButton.setImage(UIImage(named: imageName), for: .normal)
     }
     
-    private func setButtonState(){
-        if (passwordInput.hasText) {
-            nextButton.isEnabled = true
-        }else{
-            nextButton.isEnabled = false
-        }
+    func addTargetTextField() {
+        self.passwordInput.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
     }
-
+    
+    @objc func textFieldDidChange(_ sender:Any?) -> Void {
+        nextButton.isEnabled = passwordInput.hasText
+    }
 }

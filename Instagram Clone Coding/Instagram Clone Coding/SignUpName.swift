@@ -14,11 +14,7 @@ class SignUpName: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setButtonState()
-    }
-    
-    @IBAction func nameEdited(_ sender: Any) {
-        setButtonState()
+        addTargetTextField()
     }
     
     @IBAction func gotoPWClicked(_ sender: Any) {
@@ -29,11 +25,11 @@ class SignUpName: UIViewController {
         self.navigationController?.pushViewController(signUpPwVC, animated: true)
     }
     
-    private func setButtonState(){
-        if (nameInput.hasText) {
-            nextButton.isEnabled = true
-        }else{
-            nextButton.isEnabled = false
-        }
+    func addTargetTextField() {
+        self.nameInput.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
+    }
+    
+    @objc func textFieldDidChange(_ sender:Any?) -> Void {
+        nextButton.isEnabled = nameInput.hasText
     }
 }
