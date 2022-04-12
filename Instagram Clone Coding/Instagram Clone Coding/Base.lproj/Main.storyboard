@@ -48,7 +48,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="로그인"/>
                                 <connections>
-                                    <action selector="gotoWelcomeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P2c-wn-LE1"/>
+                                    <action selector="loginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pTD-iS-2hX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="계정이 없으신가요?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRq-JB-Fi1">
@@ -86,9 +86,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="IqO-Kr-IqY"/>
                     <connections>
-                        <outlet property="gotoWelcomeButton" destination="ECW-KM-fzu" id="jbh-QE-sYh"/>
-                        <outlet property="nameInput" destination="NdL-27-QN0" id="AJM-ZW-aUa"/>
-                        <outlet property="passwordInput" destination="XVR-Wn-Oxx" id="u3I-5p-gPG"/>
+                        <outlet property="loginButton" destination="ECW-KM-fzu" id="1l7-J2-FAd"/>
+                        <outlet property="nameTextField" destination="NdL-27-QN0" id="p59-9N-uH9"/>
+                        <outlet property="passwordTextField" destination="XVR-Wn-Oxx" id="rCb-NL-Gaa"/>
                         <outlet property="pwSecureButton" destination="0Tm-hd-eDa" id="IaM-rO-i0E"/>
                     </connections>
                 </viewController>
@@ -140,7 +140,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="nameInput" destination="ued-kw-5vh" id="2P0-RA-qys"/>
+                        <outlet property="nameTextField" destination="ued-kw-5vh" id="2KB-4m-49i"/>
                         <outlet property="nextButton" destination="Mh4-dF-zmq" id="RCr-dp-ei2"/>
                     </connections>
                 </viewController>
@@ -209,7 +209,7 @@
                     </view>
                     <connections>
                         <outlet property="nextButton" destination="26u-YX-zUo" id="7II-eP-KhT"/>
-                        <outlet property="passwordInput" destination="9qG-te-iHk" id="xNK-tf-x9E"/>
+                        <outlet property="passwordTextField" destination="9qG-te-iHk" id="M6E-ML-370"/>
                         <outlet property="pwSecureButton" destination="aUw-AN-63D" id="W8A-da-zGg"/>
                     </connections>
                 </viewController>

@@ -9,9 +9,9 @@ import UIKit
 
 class Login: UIViewController {
 
-    @IBOutlet weak var nameInput: UITextField!
-    @IBOutlet weak var passwordInput: UITextField!
-    @IBOutlet weak var gotoWelcomeButton: UIButton!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var pwSecureButton: UIButton!
     
     override func viewDidLoad() {
@@ -19,10 +19,10 @@ class Login: UIViewController {
         addTargetTextField()
     }
     
-    @IBAction func gotoWelcomeClicked(_ sender: Any) {
+    @IBAction func loginButtonClicked(_ sender: Any) {
         guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Welcome")as?Welcome else {return}
         
-        welcomeVC.name = nameInput.text
+        welcomeVC.name = nameTextField.text
         welcomeVC.modalTransitionStyle = .crossDissolve
         welcomeVC.modalPresentationStyle = .fullScreen
         
@@ -36,17 +36,17 @@ class Login: UIViewController {
     }
     
     @IBAction func toggleSecurityMode(_ sender: Any) {
-        passwordInput.isSecureTextEntry.toggle()
-        let imageName = passwordInput.isSecureTextEntry ? "password hidden eye icon" : "password shown eye icon"
+        passwordTextField.isSecureTextEntry.toggle()
+        let imageName = passwordTextField.isSecureTextEntry ? "password hidden eye icon" : "password shown eye icon"
         pwSecureButton.setImage(UIImage(named: imageName), for: .normal)
     }
     
     func addTargetTextField() {
-        self.nameInput.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
-        self.passwordInput.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
+        self.nameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
+        self.passwordTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
     }
     
     @objc func textFieldDidChange(_ sender:Any?) -> Void {
-        gotoWelcomeButton.isEnabled = nameInput.hasText && passwordInput.hasText
+        loginButton.isEnabled = nameTextField.hasText && passwordTextField.hasText
     }
 }

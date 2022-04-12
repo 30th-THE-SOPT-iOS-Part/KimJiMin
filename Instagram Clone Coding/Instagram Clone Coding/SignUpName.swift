@@ -9,7 +9,7 @@ import UIKit
 
 class SignUpName: UIViewController {
 
-    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
@@ -20,16 +20,16 @@ class SignUpName: UIViewController {
     @IBAction func gotoPWClicked(_ sender: Any) {
         guard let signUpPwVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpPw")as?SignUpPw else {return}
 
-        signUpPwVC.name = nameInput.text
+        signUpPwVC.name = nameTextField.text
 
         self.navigationController?.pushViewController(signUpPwVC, animated: true)
     }
     
     func addTargetTextField() {
-        self.nameInput.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
+        self.nameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
     }
     
     @objc func textFieldDidChange(_ sender:Any?) -> Void {
-        nextButton.isEnabled = nameInput.hasText
+        nextButton.isEnabled = nameTextField.hasText
     }
 }

@@ -11,7 +11,7 @@ class SignUpPw: UIViewController {
     
     var name: String?
     
-    @IBOutlet weak var passwordInput: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pwSecureButton: UIButton!
     
@@ -29,16 +29,16 @@ class SignUpPw: UIViewController {
     }
     
     @IBAction func toggleSecurityMode(_ sender: Any) {
-        passwordInput.isSecureTextEntry.toggle()
-        let imageName = passwordInput.isSecureTextEntry ? "password hidden eye icon" : "password shown eye icon"
+        passwordTextField.isSecureTextEntry.toggle()
+        let imageName = passwordTextField.isSecureTextEntry ? "password hidden eye icon" : "password shown eye icon"
         pwSecureButton.setImage(UIImage(named: imageName), for: .normal)
     }
     
     func addTargetTextField() {
-        self.passwordInput.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
+        self.passwordTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
     }
     
     @objc func textFieldDidChange(_ sender:Any?) -> Void {
-        nextButton.isEnabled = passwordInput.hasText
+        nextButton.isEnabled = passwordTextField.hasText
     }
 }
