@@ -42,8 +42,9 @@ class LoginVC: UIViewController {
     }
     
     func addTargetTextField() {
-        self.nameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
-        self.passwordTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
+        [nameTextField, passwordTextField].forEach {
+              $0?.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        }
     }
     
     @objc func textFieldDidChange(_ sender:Any?) -> Void {
