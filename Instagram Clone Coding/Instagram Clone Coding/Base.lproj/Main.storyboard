@@ -292,7 +292,7 @@
                                 <state key="normal" title="완료하기"/>
                                 <buttonConfiguration key="configuration" style="filled" title="완료하기"/>
                                 <connections>
-                                    <segue destination="bVV-gQ-77p" kind="show" id="Dfp-Rw-v69"/>
+                                    <action selector="completeLoginClicked:" destination="olk-Ua-VuG" eventType="touchUpInside" id="BEM-Ry-izY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzg-au-9jz">
