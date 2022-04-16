@@ -17,14 +17,14 @@ class WelcomeVC: UIViewController {
         super.viewDidLoad()
         setName()
     }
-    
     @IBAction func gotoLoginClicked(_ sender: Any) {
+        print("clicked")
         guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
+        print(presentingVC)
         self.view.window?.rootViewController?.dismiss(animated: false){
             presentingVC.popToRootViewController(animated: true)}
     }
-
-
+    
     @IBAction func completeLoginClicked(_ sender: Any) {
         var mainView: UIStoryboard!
           mainView = UIStoryboard(name: "TabBar", bundle: nil)
