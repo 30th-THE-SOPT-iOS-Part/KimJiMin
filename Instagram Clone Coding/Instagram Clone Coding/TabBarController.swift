@@ -12,7 +12,7 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         setTabBarController()
     }
-    //Overriding this to get callback whenever its value is changes
+
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         if item == (tabBar.items!)[2]{
             tabBar.backgroundColor = .black

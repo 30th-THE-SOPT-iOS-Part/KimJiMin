@@ -18,9 +18,7 @@ class WelcomeVC: UIViewController {
         setName()
     }
     @IBAction func gotoLoginClicked(_ sender: Any) {
-        print("clicked")
         guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
-        print(presentingVC)
         self.view.window?.rootViewController?.dismiss(animated: false){
             presentingVC.popToRootViewController(animated: true)}
     }
