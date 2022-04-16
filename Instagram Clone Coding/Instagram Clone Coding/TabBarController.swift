@@ -12,8 +12,24 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         setTabBarController()
     }
+    //Overriding this to get callback whenever its value is changes
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item == (tabBar.items!)[2]{
+            tabBar.backgroundColor = .black
+            tabBar.tintColor = .white
+            tabBar.unselectedItemTintColor = .white
+        }else {
+            tabBar.backgroundColor = .white
+            tabBar.tintColor = .black
+            tabBar.unselectedItemTintColor = .black
+        }
+    }
 
     func setTabBarController(){
+        tabBar.backgroundColor = .white
+        tabBar.tintColor = .black
+        tabBar.unselectedItemTintColor = .black
+        
         guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC"),
               let yellowVC = self.storyboard?.instantiateViewController(withIdentifier: "YellowVC"),
               let greenVC = self.storyboard?.instantiateViewController(withIdentifier: "GreenVC"),
