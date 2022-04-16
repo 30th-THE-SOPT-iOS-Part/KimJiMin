@@ -14,14 +14,14 @@ class TabBarController: UITabBarController {
     }
 
     func setTabBarController(){
-        guard let redVC = self.storyboard?.instantiateViewController(withIdentifier: "RedVC"),
+        guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC"),
               let yellowVC = self.storyboard?.instantiateViewController(withIdentifier: "YellowVC"),
               let greenVC = self.storyboard?.instantiateViewController(withIdentifier: "GreenVC"),
               let blueVC = self.storyboard?.instantiateViewController(withIdentifier: "BlueVC"),
               let purpleVC = self.storyboard?.instantiateViewController(withIdentifier: "PurpleVC")
         else {return}
         
-        redVC.tabBarItem = UITabBarItem(
+        mainVC.tabBarItem = UITabBarItem(
             title: "",
             image: UIImage(named: "icn_home"),
             selectedImage: UIImage(named: "icn_home_selected")
@@ -47,6 +47,6 @@ class TabBarController: UITabBarController {
             selectedImage: UIImage(named: "icn_profile_selected")
         )
         
-        setViewControllers([redVC,yellowVC,greenVC,blueVC,purpleVC], animated: true)
+        setViewControllers([mainVC,yellowVC,greenVC,blueVC,purpleVC], animated: true)
     }
 }

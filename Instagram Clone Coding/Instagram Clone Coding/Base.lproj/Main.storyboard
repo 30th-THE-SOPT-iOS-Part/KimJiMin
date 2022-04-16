@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jdg-tf-Zex">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -233,7 +233,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUw-AN-63D">
-                                <rect key="frame" x="271" y="449" width="28" height="34"/>
+                                <rect key="frame" x="321" y="384" width="28" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="password hidden eye icon" title="">
@@ -279,6 +279,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="다른 계정으로 로그인하기" titleAlignment="center">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="gotoLoginClicked:" destination="olk-Ua-VuG" eventType="touchUpInside" id="LCl-xV-LQI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWj-bG-zsW">
                                 <rect key="frame" x="37" y="457.66666666666669" width="316" height="40"/>
@@ -289,7 +292,7 @@
                                 <state key="normal" title="완료하기"/>
                                 <buttonConfiguration key="configuration" style="filled" title="완료하기"/>
                                 <connections>
-                                    <action selector="gotoLoginClicked:" destination="olk-Ua-VuG" eventType="touchUpInside" id="drk-dU-cYy"/>
+                                    <segue destination="bVV-gQ-77p" kind="show" id="Dfp-Rw-v69"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzg-au-9jz">
@@ -333,6 +336,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPd-EG-NaV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2257.971014492754" y="134.59821428571428"/>
+        </scene>
+        <!--TabBar-->
+        <scene sceneID="nh9-kn-FWy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabBar" id="bVV-gQ-77p" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4F9-CG-bPc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SgI-0m-ZMg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2851" y="91"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H4X-GG-OdL">

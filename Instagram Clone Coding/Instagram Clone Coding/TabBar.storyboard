@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-446" y="575"/>
         </scene>
-        <!--Red-->
+        <!--Main-->
         <scene sceneID="xHn-ny-Ci1">
             <objects>
-                <viewController storyboardIdentifier="RedVC" id="PDG-2h-rTn" userLabel="Red" customClass="RedVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="PDG-2h-rTn" userLabel="Main" customClass="MainVC" customModule="Instagram_Clone_Coding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PfY-U7-mN6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
