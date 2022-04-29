@@ -59,6 +59,141 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DDA29C8281C47F700B3D275 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DF4D38527FD5CEA00405AB4 /* AppDelegate.swift */,
+				4DF4D38927FD5CEA00405AB4 /* ViewController.swift */,
+				4DF4D38727FD5CEA00405AB4 /* SceneDelegate.swift */,
+				4DF4D38E27FD5CEF00405AB4 /* Assets.xcassets */,
+				4DDA29C9281C481D00B3D275 /* Storyboards */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4DDA29C9281C481D00B3D275 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4DF4D39027FD5CEF00405AB4 /* LaunchScreen.storyboard */,
+				4DF4D38B27FD5CEA00405AB4 /* Main.storyboard */,
+				4D55FE0E280AAD2200662058 /* TabBar.storyboard */,
+				4DDA29D0281C490E00B3D275 /* Main */,
+				4DDA29CF281C490400B3D275 /* Auth */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4DDA29CA281C487100B3D275 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4DDA29CC281C488700B3D275 /* ViewControllers */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		4DDA29CB281C487900B3D275 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		4DDA29CC281C488700B3D275 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DDA29CB281C487900B3D275 /* Cells */,
+				4DDA29CE281C48C100B3D275 /* Auth */,
+				4DDA29CD281C48B500B3D275 /* Main */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4DDA29CD281C48B500B3D275 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4DDA29D1281C494200B3D275 /* TabBar */,
+				4DDA29D2281C494C00B3D275 /* Home */,
+				4DDA29D3281C495400B3D275 /* Search */,
+				4DDA29D4281C495E00B3D275 /* Reels */,
+				4DDA29D5281C496500B3D275 /* Shop */,
+				4DDA29D6281C496C00B3D275 /* Profile */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		4DDA29CE281C48C100B3D275 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				4DF4D39927FD5D2E00405AB4 /* LoginVC.swift */,
+				4DF4D39D27FD5F9E00405AB4 /* SignUpPwVC.swift */,
+				4DF4D39B27FD5D6700405AB4 /* SignUpNameVC.swift */,
+				4DF4D39F27FD5FB600405AB4 /* WelcomeVC.swift */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		4DDA29CF281C490400B3D275 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		4DDA29D0281C490E00B3D275 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4DDA29D1281C494200B3D275 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4D55FE10280AAEB200662058 /* TabBarController.swift */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		4DDA29D2281C494C00B3D275 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4D55FE12280AAECE00662058 /* MainVC.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		4DDA29D3281C495400B3D275 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4D55FE14280AAEDB00662058 /* YellowVC.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		4DDA29D4281C495E00B3D275 /* Reels */ = {
+			isa = PBXGroup;
+			children = (
+				4D55FE16280AAEEA00662058 /* GreenVC.swift */,
+			);
+			name = Reels;
+			sourceTree = "<group>";
+		};
+		4DDA29D5281C496500B3D275 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				4D55FE18280AAEF200662058 /* BlueVC.swift */,
+			);
+			name = Shop;
+			sourceTree = "<group>";
+		};
+		4DDA29D6281C496C00B3D275 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4D55FE1A280AAEFB00662058 /* PurpleVC.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		4DF4D37927FD5CEA00405AB4 = {
 			isa = PBXGroup;
 			children = (
@@ -78,24 +213,9 @@
 		4DF4D38427FD5CEA00405AB4 /* Instagram Clone Coding */ = {
 			isa = PBXGroup;
 			children = (
-				4DF4D38527FD5CEA00405AB4 /* AppDelegate.swift */,
-				4DF4D38727FD5CEA00405AB4 /* SceneDelegate.swift */,
-				4DF4D38927FD5CEA00405AB4 /* ViewController.swift */,
-				4DF4D38B27FD5CEA00405AB4 /* Main.storyboard */,
-				4DF4D38E27FD5CEF00405AB4 /* Assets.xcassets */,
-				4DF4D39027FD5CEF00405AB4 /* LaunchScreen.storyboard */,
+				4DDA29C8281C47F700B3D275 /* Resources */,
+				4DDA29CA281C487100B3D275 /* Sources */,
 				4DF4D39327FD5CEF00405AB4 /* Info.plist */,
-				4DF4D39B27FD5D6700405AB4 /* SignUpNameVC.swift */,
-				4DF4D39927FD5D2E00405AB4 /* LoginVC.swift */,
-				4DF4D39D27FD5F9E00405AB4 /* SignUpPwVC.swift */,
-				4DF4D39F27FD5FB600405AB4 /* WelcomeVC.swift */,
-				4D55FE0E280AAD2200662058 /* TabBar.storyboard */,
-				4D55FE10280AAEB200662058 /* TabBarController.swift */,
-				4D55FE12280AAECE00662058 /* MainVC.swift */,
-				4D55FE1A280AAEFB00662058 /* PurpleVC.swift */,
-				4D55FE14280AAEDB00662058 /* YellowVC.swift */,
-				4D55FE18280AAEF200662058 /* BlueVC.swift */,
-				4D55FE16280AAEEA00662058 /* GreenVC.swift */,
 			);
 			path = "Instagram Clone Coding";
 			sourceTree = "<group>";
