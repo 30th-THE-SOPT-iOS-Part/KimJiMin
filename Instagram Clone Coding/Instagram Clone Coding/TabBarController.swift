@@ -26,8 +26,6 @@ class TabBarController: UITabBarController {
     }
 
     func setTabBarController(){
-        tabBar.backgroundColor = .white
-        tabBar.tintColor = .black
         tabBar.unselectedItemTintColor = .black
 
         guard let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeVC")as? HomeVC ,
