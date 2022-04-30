@@ -26,7 +26,7 @@ class SignUpPwVC: UIViewController {
         welcomeVC.modalTransitionStyle = .crossDissolve
         welcomeVC.modalPresentationStyle = .fullScreen
         welcomeVC.name = name
-        self.present(welcomeVC,animated: true,completion: nil)
+        self.present(welcomeVC,animated: true)
     }
     
     func setTargets() {

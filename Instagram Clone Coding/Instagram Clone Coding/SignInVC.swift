@@ -27,7 +27,7 @@ class SignInVC: UIViewController {
         welcomeVC.modalTransitionStyle = .crossDissolve
         welcomeVC.modalPresentationStyle = .fullScreen
         
-        self.present(welcomeVC,animated: true,completion: nil)
+        self.present(welcomeVC,animated: true)
     }
     
     @IBAction func gotoSignUpClicked(_ sender: Any) {
