@@ -12,18 +12,10 @@ class SignInVC: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var pwSecureButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setPWSecureButton()
-        addTargets()
-    }
-    
-    func setPWSecureButton(){
-        pwSecureButton.setBackgroundImage(UIImage(named: "password hidden eye icon"), for: .normal)
-        passwordTextField.rightView = pwSecureButton
-        passwordTextField.rightViewMode = UITextField.ViewMode.always
+        setTargets()
     }
     
     @IBAction func loginButtonClicked(_ sender: Any) {
@@ -45,20 +37,14 @@ class SignInVC: UIViewController {
         self.navigationController?.pushViewController(signUpNameVC, animated: true)
     }
     
-    func addTargets() {
+    func setTargets() {
         [nameTextField, passwordTextField].forEach {
               $0?.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         }
-        pwSecureButton.addTarget(self, action:  #selector(toggleSecurityMode), for: .touchUpInside)
+        passwordTextField.setPWSecureButton()
     }
     
     @objc func textFieldDidChange(_ sender:Any?) -> Void {
         loginButton.isEnabled = nameTextField.hasText && passwordTextField.hasText
-    }
-    
-    @objc func toggleSecurityMode(){
-        passwordTextField.isSecureTextEntry.toggle()
-        let imageName = passwordTextField.isSecureTextEntry ? "password hidden eye icon" : "password shown eye icon"
-        pwSecureButton.setImage(UIImage(named: imageName), for: .normal)
     }
 }

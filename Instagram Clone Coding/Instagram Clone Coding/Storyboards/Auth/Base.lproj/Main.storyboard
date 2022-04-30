@@ -90,14 +90,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cK-L6-bmM">
-                                <rect key="frame" x="126" y="754" width="139" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="password hidden eye icon" imagePlacement="trailing" title="" imagePadding="0.0">
-                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eNv-vw-Wzx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -121,7 +113,6 @@
                         <outlet property="loginButton" destination="GLK-R8-Hdh" id="ts9-We-Ex8"/>
                         <outlet property="nameTextField" destination="qsV-lt-dTL" id="f6j-bo-A2b"/>
                         <outlet property="passwordTextField" destination="PuY-Lv-5ME" id="WaY-wK-ehd"/>
-                        <outlet property="pwSecureButton" destination="7cK-L6-bmM" id="wo1-G8-4JM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1E-is-vvf" sceneMemberID="firstResponder"/>

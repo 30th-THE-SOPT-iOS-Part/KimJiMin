@@ -57,14 +57,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uY-zd-AOk">
-                                <rect key="frame" x="321" y="384" width="28" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="password hidden eye icon" title="">
-                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d80-xh-9xt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -83,7 +75,6 @@
                     <connections>
                         <outlet property="nextButton" destination="f6m-23-pm2" id="CXv-ET-Dw2"/>
                         <outlet property="passwordTextField" destination="ehh-sF-o4O" id="5tG-hP-I0H"/>
-                        <outlet property="pwSecureButton" destination="3uY-zd-AOk" id="8GQ-vY-vj1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSW-w0-dCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -92,7 +83,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="password hidden eye icon" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

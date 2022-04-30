@@ -21,6 +21,7 @@
 		4D5CB867281CECC000DCB432 /* Reels.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5CB866281CECC000DCB432 /* Reels.storyboard */; };
 		4D5CB869281CECCC00DCB432 /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5CB868281CECCC00DCB432 /* Shop.storyboard */; };
 		4D5CB86B281CECD600DCB432 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5CB86A281CECD600DCB432 /* Profile.storyboard */; };
+		4D5CB86E281CFF7C00DCB432 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5CB86D281CFF7C00DCB432 /* UITextField.swift */; };
 		4DDA29DA281C4BF600B3D275 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDA29D9281C4BF600B3D275 /* Welcome.storyboard */; };
 		4DF4D38627FD5CEA00405AB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D38527FD5CEA00405AB4 /* AppDelegate.swift */; };
 		4DF4D38827FD5CEA00405AB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D38727FD5CEA00405AB4 /* SceneDelegate.swift */; };
@@ -49,6 +50,7 @@
 		4D5CB866281CECC000DCB432 /* Reels.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reels.storyboard; sourceTree = "<group>"; };
 		4D5CB868281CECCC00DCB432 /* Shop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
 		4D5CB86A281CECD600DCB432 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		4D5CB86D281CFF7C00DCB432 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		4DDA29D9281C4BF600B3D275 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		4DF4D38227FD5CEA00405AB4 /* Instagram Clone Coding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instagram Clone Coding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF4D38527FD5CEA00405AB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D5CB86C281CFF5C00DCB432 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D5CB86D281CFF7C00DCB432 /* UITextField.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4DDA29C8281C47F700B3D275 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 				4DF4D38727FD5CEA00405AB4 /* SceneDelegate.swift */,
 				4DF4D38E27FD5CEF00405AB4 /* Assets.xcassets */,
 				4DDA29C9281C481D00B3D275 /* Storyboards */,
+				4D5CB86C281CFF5C00DCB432 /* Extensions */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -333,6 +344,7 @@
 				4DF4D38827FD5CEA00405AB4 /* SceneDelegate.swift in Sources */,
 				4DF4D39C27FD5D6700405AB4 /* SignUpNameVC.swift in Sources */,
 				4DF4D39E27FD5F9E00405AB4 /* SignUpPwVC.swift in Sources */,
+				4D5CB86E281CFF7C00DCB432 /* UITextField.swift in Sources */,
 				4DF4D39A27FD5D2E00405AB4 /* SignInVC.swift in Sources */,
 				4D55FE19280AAEF200662058 /* ShopVC.swift in Sources */,
 				4D55FE1B280AAEFB00662058 /* ProfileVC.swift in Sources */,
