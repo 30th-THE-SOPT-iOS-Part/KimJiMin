@@ -13,18 +13,6 @@ class TabBarController: UITabBarController {
         setTabBarController()
     }
 
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        if item == (tabBar.items!)[2]{
-            tabBar.backgroundColor = .black
-            tabBar.tintColor = .white
-            tabBar.unselectedItemTintColor = .white
-        }else {
-            tabBar.backgroundColor = .white
-            tabBar.tintColor = .black
-            tabBar.unselectedItemTintColor = .black
-        }
-    }
-
     func setTabBarController(){
         tabBar.unselectedItemTintColor = .black
 
@@ -62,5 +50,19 @@ class TabBarController: UITabBarController {
         )
         
         setViewControllers([homeVC,searchVC,reelsVC,shopVC,profileVC], animated: true)
+    }
+}
+
+extension TabBarController: UITabBarControllerDelegate {
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item == (tabBar.items!)[2]{
+            tabBar.backgroundColor = .black
+            tabBar.tintColor = .white
+            tabBar.unselectedItemTintColor = .white
+        }else {
+            tabBar.backgroundColor = .white
+            tabBar.tintColor = .black
+            tabBar.unselectedItemTintColor = .black
+        }
     }
 }
