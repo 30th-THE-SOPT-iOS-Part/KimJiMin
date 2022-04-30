@@ -13,29 +13,25 @@ class SignUpPwVC: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var pwSecureButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addTargetTextField()
+        setTargets()
     }
     
     @IBAction func gotoWelcomeClicked(_ sender: Any) {
-        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as?WelcomeVC else {return}
+        let welcomeSB = UIStoryboard(name: "Welcome", bundle: nil)
+        guard let welcomeVC = welcomeSB.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
+        
         welcomeVC.modalTransitionStyle = .crossDissolve
         welcomeVC.modalPresentationStyle = .fullScreen
         welcomeVC.name = name
-        self.present(welcomeVC,animated: true,completion: nil)
+        self.present(welcomeVC,animated: true)
     }
     
-    @IBAction func toggleSecurityMode(_ sender: Any) {
-        passwordTextField.isSecureTextEntry.toggle()
-        let imageName = passwordTextField.isSecureTextEntry ? "password hidden eye icon" : "password shown eye icon"
-        pwSecureButton.setImage(UIImage(named: imageName), for: .normal)
-    }
-    
-    func addTargetTextField() {
+    func setTargets() {
         self.passwordTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
+        passwordTextField.setPWSecureButton()
     }
     
     @objc func textFieldDidChange(_ sender:Any?) -> Void {

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lre-b6-uqs">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--WelcomeVC-->
+        <scene sceneID="BnX-ub-zDy">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeVC" id="lre-b6-uqs" customClass="WelcomeVC" customModule="Instagram_Clone_Coding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DYM-Pm-2Hy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXt-3R-jdW">
+                                <rect key="frame" x="113" y="515.5" width="189" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다른 계정으로 로그인하기" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="gotoLoginClicked:" destination="lre-b6-uqs" eventType="touchUpInside" id="I2k-js-67X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jS3-LF-T09">
+                                <rect key="frame" x="37" y="457.5" width="340" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="PVa-Fq-DdC"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="완료하기"/>
+                                <buttonConfiguration key="configuration" style="filled" title="완료하기"/>
+                                <connections>
+                                    <action selector="completeLoginClicked:" destination="lre-b6-uqs" eventType="touchUpInside" id="uO3-mh-7U6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNC-ql-QZU">
+                                <rect key="frame" x="75" y="354" width="264" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="언제든지 연락처 정보와 사용자 이름을 변경할 수 있습니다." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="v9m-aB-ZMn">
+                                <rect key="frame" x="35" y="397.5" width="344" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UVo-IY-71Y"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IEt-tU-Drh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dXt-3R-jdW" firstAttribute="leading" secondItem="IEt-tU-Drh" secondAttribute="leading" constant="113" id="Cf7-qo-mev"/>
+                            <constraint firstItem="IEt-tU-Drh" firstAttribute="trailing" secondItem="v9m-aB-ZMn" secondAttribute="trailing" constant="35" id="HhR-4v-Qdt"/>
+                            <constraint firstItem="jNC-ql-QZU" firstAttribute="leading" secondItem="IEt-tU-Drh" secondAttribute="leading" constant="75" id="JhZ-IG-V41"/>
+                            <constraint firstItem="jNC-ql-QZU" firstAttribute="top" secondItem="IEt-tU-Drh" secondAttribute="top" constant="310" id="RWf-fc-RaT"/>
+                            <constraint firstItem="jS3-LF-T09" firstAttribute="leading" secondItem="IEt-tU-Drh" secondAttribute="leading" constant="37" id="WM6-Ds-NUB"/>
+                            <constraint firstItem="IEt-tU-Drh" firstAttribute="trailing" secondItem="jS3-LF-T09" secondAttribute="trailing" constant="37" id="gXa-XW-MjM"/>
+                            <constraint firstItem="v9m-aB-ZMn" firstAttribute="top" secondItem="jNC-ql-QZU" secondAttribute="bottom" constant="16" id="icb-f6-fOb"/>
+                            <constraint firstItem="IEt-tU-Drh" firstAttribute="trailing" secondItem="jNC-ql-QZU" secondAttribute="trailing" constant="75" id="lkO-NE-bnV"/>
+                            <constraint firstItem="jS3-LF-T09" firstAttribute="top" secondItem="v9m-aB-ZMn" secondAttribute="bottom" constant="30" id="n3O-fN-95H"/>
+                            <constraint firstItem="v9m-aB-ZMn" firstAttribute="leading" secondItem="IEt-tU-Drh" secondAttribute="leading" constant="35" id="q7A-fi-vXf"/>
+                            <constraint firstItem="IEt-tU-Drh" firstAttribute="trailing" secondItem="dXt-3R-jdW" secondAttribute="trailing" constant="112" id="wcn-qT-zBe"/>
+                            <constraint firstItem="dXt-3R-jdW" firstAttribute="top" secondItem="jS3-LF-T09" secondAttribute="bottom" constant="18" id="yLZ-6o-BqR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="jNC-ql-QZU" id="yaP-RU-N3W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mA-J6-lxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2257.971014492754" y="134.59821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

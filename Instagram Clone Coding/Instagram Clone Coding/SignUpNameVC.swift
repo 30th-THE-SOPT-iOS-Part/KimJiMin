@@ -18,7 +18,8 @@ class SignUpNameVC: UIViewController {
     }
     
     @IBAction func gotoPWClicked(_ sender: Any) {
-        guard let signUpPwVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpPwVC")as?SignUpPwVC else {return}
+        let signUpPwSB = UIStoryboard(name: "SignUpPw", bundle: nil)
+        guard let signUpPwVC = signUpPwSB.instantiateViewController(withIdentifier: "SignUpPwVC") as? SignUpPwVC else {return}
 
         signUpPwVC.name = nameTextField.text
 

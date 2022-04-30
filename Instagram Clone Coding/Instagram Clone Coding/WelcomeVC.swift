@@ -17,13 +17,18 @@ class WelcomeVC: UIViewController {
         super.viewDidLoad()
         setName()
     }
-    
     @IBAction func gotoLoginClicked(_ sender: Any) {
         guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
         self.view.window?.rootViewController?.dismiss(animated: false){
             presentingVC.popToRootViewController(animated: true)}
     }
     
+    @IBAction func completeLoginClicked(_ sender: Any) {
+        let tabBarSB = UIStoryboard(name: "TabBar", bundle: nil)
+        let tabBarController = tabBarSB.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        self.view.window?.rootViewController = tabBarController
+    }
+
     private func setName(){
         if let name = name {
             nameLabel.text = "\(name)님 Instagram에 오신 것을 환영합니다"
