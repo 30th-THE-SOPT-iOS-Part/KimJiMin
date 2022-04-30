@@ -28,7 +28,9 @@ class SignUpPwVC: UIViewController {
     }
     
     @IBAction func gotoWelcomeClicked(_ sender: Any) {
-        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as?WelcomeVC else {return}
+        let welcomeSB = UIStoryboard(name: "Welcome", bundle: nil)
+        guard let welcomeVC = welcomeSB.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
+        
         welcomeVC.modalTransitionStyle = .crossDissolve
         welcomeVC.modalPresentationStyle = .fullScreen
         welcomeVC.name = name

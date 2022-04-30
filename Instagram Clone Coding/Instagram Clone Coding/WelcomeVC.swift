@@ -24,9 +24,8 @@ class WelcomeVC: UIViewController {
     }
     
     @IBAction func completeLoginClicked(_ sender: Any) {
-        var mainView: UIStoryboard!
-          mainView = UIStoryboard(name: "TabBar", bundle: nil)
-        let tabBarController = mainView.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        let tabBarSB = UIStoryboard(name: "TabBar", bundle: nil)
+        let tabBarController = tabBarSB.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
         self.view.window?.rootViewController = tabBarController
     }
 

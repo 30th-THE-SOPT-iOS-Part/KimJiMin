@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class SignInVC: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -27,7 +27,9 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginButtonClicked(_ sender: Any) {
-        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as?WelcomeVC else {return}
+        
+        let welcomeSB = UIStoryboard(name: "Welcome", bundle: nil)
+        guard let welcomeVC = welcomeSB.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
         
         welcomeVC.name = nameTextField.text
         welcomeVC.modalTransitionStyle = .crossDissolve
@@ -37,7 +39,8 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func gotoSignUpClicked(_ sender: Any) {
-        guard let signUpNameVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpNameVC") as?SignUpNameVC else {return}
+        let signUpNameSB = UIStoryboard(name: "SignUpName", bundle: nil)
+        guard let signUpNameVC = signUpNameSB.instantiateViewController(withIdentifier: "SignUpNameVC") as? SignUpNameVC else {return}
         
         self.navigationController?.pushViewController(signUpNameVC, animated: true)
     }

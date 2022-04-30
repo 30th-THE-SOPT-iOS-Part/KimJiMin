@@ -29,40 +29,40 @@ class TabBarController: UITabBarController {
         tabBar.backgroundColor = .white
         tabBar.tintColor = .black
         tabBar.unselectedItemTintColor = .black
-        
-        guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC"),
-              let yellowVC = self.storyboard?.instantiateViewController(withIdentifier: "YellowVC"),
-              let greenVC = self.storyboard?.instantiateViewController(withIdentifier: "GreenVC"),
-              let blueVC = self.storyboard?.instantiateViewController(withIdentifier: "BlueVC"),
-              let purpleVC = self.storyboard?.instantiateViewController(withIdentifier: "PurpleVC")
+
+        guard let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeVC")as? HomeVC ,
+              let searchVC = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "SearchVC")as? SearchVC,
+              let reelsVC = UIStoryboard(name: "Reels", bundle: nil).instantiateViewController(withIdentifier: "ReelsVC")as? ReelsVC,
+              let shopVC = UIStoryboard(name: "Shop", bundle: nil).instantiateViewController(withIdentifier: "ShopVC")as? ShopVC,
+              let profileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileVC")as? ProfileVC
         else {return}
         
-        mainVC.tabBarItem = UITabBarItem(
+        homeVC.tabBarItem = UITabBarItem(
             title: "",
             image: UIImage(named: "icn_home"),
             selectedImage: UIImage(named: "icn_home_selected")
         )
-        yellowVC.tabBarItem = UITabBarItem(
+        searchVC.tabBarItem = UITabBarItem(
             title: "",
             image: UIImage(named: "icn_search"),
             selectedImage: UIImage(named: "icn_search_selected")
         )
-        greenVC.tabBarItem = UITabBarItem(
+        reelsVC.tabBarItem = UITabBarItem(
             title: "",
             image: UIImage(named: "icn_reels"),
             selectedImage: UIImage(named: "icn_reels_selected")
         )
-        blueVC.tabBarItem = UITabBarItem(
+        shopVC.tabBarItem = UITabBarItem(
             title: "",
             image: UIImage(named: "icn_shop"),
             selectedImage: UIImage(named: "icn_shop_selected")
         )
-        purpleVC.tabBarItem = UITabBarItem(
+        profileVC.tabBarItem = UITabBarItem(
             title: "",
             image: UIImage(named: "icn_profile"),
             selectedImage: UIImage(named: "icn_profile_selected")
         )
         
-        setViewControllers([mainVC,yellowVC,greenVC,blueVC,purpleVC], animated: true)
+        setViewControllers([homeVC,searchVC,reelsVC,shopVC,profileVC], animated: true)
     }
 }
