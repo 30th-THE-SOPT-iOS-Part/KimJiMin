@@ -20,32 +20,23 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUy-4h-IqW">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5I-Ny-fQF">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="ueD-l5-eGA"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZcM-WL-prN">
-                                                <rect key="frame" x="0.0" y="200" width="414" height="900"/>
-                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="900" id="qfR-7Y-WAf"/>
-                                                </constraints>
-                                            </view>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wZb-JB-38a">
+                                                <rect key="frame" x="0.0" y="40" width="414" height="960"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </tableView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="c5I-Ny-fQF" firstAttribute="leading" secondItem="pUy-4h-IqW" secondAttribute="leading" id="A7q-OI-SM3"/>
-                                            <constraint firstAttribute="trailing" secondItem="ZcM-WL-prN" secondAttribute="trailing" id="WLq-k9-T3x"/>
-                                            <constraint firstItem="ZcM-WL-prN" firstAttribute="leading" secondItem="pUy-4h-IqW" secondAttribute="leading" id="X4h-xT-bNJ"/>
-                                            <constraint firstAttribute="bottom" secondItem="ZcM-WL-prN" secondAttribute="bottom" id="ZEd-U5-X12"/>
-                                            <constraint firstAttribute="trailing" secondItem="c5I-Ny-fQF" secondAttribute="trailing" id="mkq-ib-241"/>
-                                            <constraint firstItem="c5I-Ny-fQF" firstAttribute="top" secondItem="pUy-4h-IqW" secondAttribute="top" id="pMF-0i-FLx"/>
-                                            <constraint firstItem="ZcM-WL-prN" firstAttribute="top" secondItem="c5I-Ny-fQF" secondAttribute="bottom" id="x5m-Ia-ePD"/>
+                                            <constraint firstAttribute="trailing" secondItem="wZb-JB-38a" secondAttribute="trailing" id="0Cj-Tc-InQ"/>
+                                            <constraint firstItem="wZb-JB-38a" firstAttribute="leading" secondItem="pUy-4h-IqW" secondAttribute="leading" id="Dbg-qS-gcb"/>
+                                            <constraint firstItem="wZb-JB-38a" firstAttribute="top" secondItem="pUy-4h-IqW" secondAttribute="top" constant="40" id="Lej-vt-TDx"/>
+                                            <constraint firstAttribute="height" constant="1000" id="Q7A-5v-LG1"/>
+                                            <constraint firstAttribute="bottom" secondItem="wZb-JB-38a" secondAttribute="bottom" id="SzP-5i-uDh"/>
+                                            <constraint firstAttribute="bottom" secondItem="wZb-JB-38a" secondAttribute="bottom" id="eFe-fT-Abt"/>
+                                            <constraint firstAttribute="trailing" secondItem="wZb-JB-38a" secondAttribute="trailing" id="lnn-KA-3Jr"/>
+                                            <constraint firstItem="wZb-JB-38a" firstAttribute="leading" secondItem="pUy-4h-IqW" secondAttribute="leading" id="utM-zI-uIb"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -119,6 +110,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="AsH-Tz-meB"/>
                     <navigationItem key="navigationItem" id="MPC-wR-BDU"/>
+                    <connections>
+                        <outlet property="feedTableView" destination="wZb-JB-38a" id="EOa-dJ-ebf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBL-ko-GOs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -149,14 +143,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
