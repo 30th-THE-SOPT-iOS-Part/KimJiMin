@@ -111,16 +111,12 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="rJh-kz-UsC" secondAttribute="bottom" constant="7" id="6Iv-dF-dGY"/>
-                                    <constraint firstAttribute="bottom" secondItem="zna-Ng-Ds2" secondAttribute="bottom" constant="7" id="7xX-jV-IEG"/>
                                     <constraint firstItem="rJh-kz-UsC" firstAttribute="top" secondItem="Wyb-wR-tO0" secondAttribute="top" constant="7" id="L1G-sI-4em"/>
                                     <constraint firstItem="rJh-kz-UsC" firstAttribute="leading" secondItem="Wyb-wR-tO0" secondAttribute="leading" constant="10" id="MLB-eZ-MzD"/>
-                                    <constraint firstAttribute="bottom" secondItem="c7V-lN-U71" secondAttribute="bottom" constant="7" id="aTy-NQ-1j1"/>
                                     <constraint firstItem="zna-Ng-Ds2" firstAttribute="top" secondItem="Wyb-wR-tO0" secondAttribute="top" constant="7" id="b50-Up-36u"/>
                                     <constraint firstItem="zna-Ng-Ds2" firstAttribute="leading" secondItem="c7V-lN-U71" secondAttribute="trailing" constant="10" id="d6r-xF-sHh"/>
                                     <constraint firstAttribute="trailing" secondItem="Ash-OV-WkV" secondAttribute="trailing" constant="10" id="jpe-bX-dkg"/>
                                     <constraint firstItem="Ash-OV-WkV" firstAttribute="top" secondItem="Wyb-wR-tO0" secondAttribute="top" constant="7" id="ql0-Eo-6u1"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ash-OV-WkV" secondAttribute="bottom" constant="7" id="tDm-cR-XiG"/>
                                     <constraint firstItem="c7V-lN-U71" firstAttribute="top" secondItem="Wyb-wR-tO0" secondAttribute="top" constant="7" id="tPk-hi-qYq"/>
                                     <constraint firstItem="c7V-lN-U71" firstAttribute="leading" secondItem="rJh-kz-UsC" secondAttribute="trailing" constant="10" id="zoU-QX-rjS"/>
                                 </constraints>

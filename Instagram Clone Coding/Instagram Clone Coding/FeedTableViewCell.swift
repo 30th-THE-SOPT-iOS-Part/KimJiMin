@@ -27,11 +27,7 @@ class FeedTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        
-//    }
+
     func setData(_ feedData: FeedDataModel){
         writerImageButton.setImage(feedData.writerImage, for: .normal)
         writerNameButton.setTitle(feedData.writerName, for: .normal)

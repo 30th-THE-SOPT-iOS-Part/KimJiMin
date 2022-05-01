@@ -9,6 +9,7 @@ import UIKit
 
 class HomeVC: UIViewController {
 
+    @IBOutlet weak var storyCollectionView: UICollectionView!
     @IBOutlet weak var feedTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +17,14 @@ class HomeVC: UIViewController {
         let nib=UINib(nibName: FeedTableViewCell.identifier, bundle: nil)
         feedTableView.register(nib, forCellReuseIdentifier: FeedTableViewCell.identifier)
         
+        let nib2=UINib(nibName: StoryCollectionViewCell.identifier, bundle: nil)
+        storyCollectionView.register(nib2, forCellWithReuseIdentifier: StoryCollectionViewCell.identifier)
+        
         feedTableView.delegate=self
         feedTableView.dataSource=self
+        
+        storyCollectionView.delegate=self
+        storyCollectionView.dataSource=self
     }
 
 }
@@ -45,3 +52,32 @@ extension HomeVC: UITableViewDataSource {
   }
     
 }
+
+extension HomeVC : UICollectionViewDelegateFlowLayout {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    let width = UIScreen.main.bounds.width
+    
+    let cellWidth = width * (58/375)
+    let cellHeight = cellWidth * (72/58)
+    
+    return CGSize(width: cellWidth, height: cellHeight)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    return UIEdgeInsets(top:10, left: 10, bottom: 0, right: 0)
+  }
+}
+
+extension HomeVC : UICollectionViewDataSource {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return StoryDataModel.sampleData.count
+  }
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as?  StoryCollectionViewCell else {
+      return UICollectionViewCell()
+    }
+      cell.setData(StoryDataModel.sampleData[indexPath.row])
+    return cell
+  }
+}
+
