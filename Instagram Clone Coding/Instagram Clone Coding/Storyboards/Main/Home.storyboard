@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0oJ-He-q2Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7UG-UV-ndE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -15,19 +15,148 @@
                     <view key="view" contentMode="scaleToFill" id="6Z9-KZ-qI2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="euM-Jt-ykU"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6i-Mw-viS">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUy-4h-IqW">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5I-Ny-fQF">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="ueD-l5-eGA"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZcM-WL-prN">
+                                                <rect key="frame" x="0.0" y="200" width="414" height="900"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="900" id="qfR-7Y-WAf"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="c5I-Ny-fQF" firstAttribute="leading" secondItem="pUy-4h-IqW" secondAttribute="leading" id="A7q-OI-SM3"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZcM-WL-prN" secondAttribute="trailing" id="WLq-k9-T3x"/>
+                                            <constraint firstItem="ZcM-WL-prN" firstAttribute="leading" secondItem="pUy-4h-IqW" secondAttribute="leading" id="X4h-xT-bNJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZcM-WL-prN" secondAttribute="bottom" id="ZEd-U5-X12"/>
+                                            <constraint firstAttribute="trailing" secondItem="c5I-Ny-fQF" secondAttribute="trailing" id="mkq-ib-241"/>
+                                            <constraint firstItem="c5I-Ny-fQF" firstAttribute="top" secondItem="pUy-4h-IqW" secondAttribute="top" id="pMF-0i-FLx"/>
+                                            <constraint firstItem="ZcM-WL-prN" firstAttribute="top" secondItem="c5I-Ny-fQF" secondAttribute="bottom" id="x5m-Ia-ePD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pUy-4h-IqW" firstAttribute="width" secondItem="v7c-ch-fDm" secondAttribute="width" id="6Nz-ea-1pd"/>
+                                    <constraint firstItem="pUy-4h-IqW" firstAttribute="bottom" secondItem="vvY-rf-UBe" secondAttribute="bottom" id="JeV-cm-4IQ"/>
+                                    <constraint firstItem="pUy-4h-IqW" firstAttribute="trailing" secondItem="vvY-rf-UBe" secondAttribute="trailing" id="SNz-Tl-uAM"/>
+                                    <constraint firstItem="pUy-4h-IqW" firstAttribute="top" secondItem="vvY-rf-UBe" secondAttribute="top" id="fij-Ca-trc"/>
+                                    <constraint firstItem="pUy-4h-IqW" firstAttribute="leading" secondItem="vvY-rf-UBe" secondAttribute="leading" id="saK-IS-hua"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="vvY-rf-UBe"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="v7c-ch-fDm"/>
+                            </scrollView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAZ-5h-xrU">
+                                <rect key="frame" x="0.0" y="88" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="igr-j9-1FK"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="wmF-PM-ANR">
+                                        <barButtonItem key="leftBarButtonItem" title="Logo" id="c13-Rh-7vl">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="goW-4U-g4b">
+                                                <rect key="frame" x="20" y="0.0" width="175" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <state key="normal" image="Instagram Black Logo"/>
+                                            </button>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="Share" id="lxV-dz-V4J">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fbp-NX-lWG" userLabel="Share">
+                                                    <rect key="frame" x="370" y="10" width="24" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="icn_share"/>
+                                                </button>
+                                            </barButtonItem>
+                                            <barButtonItem title="Heart" id="Xum-lm-dG6">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFk-dP-Dy9" userLabel="Heart">
+                                                    <rect key="frame" x="333" y="10" width="29" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="icn_unlike"/>
+                                                </button>
+                                            </barButtonItem>
+                                            <barButtonItem title="Add" id="a8n-cC-2T6">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ku6-sa-rBE" userLabel="Add">
+                                                    <rect key="frame" x="294" y="10" width="31" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="icn_add"/>
+                                                </button>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qZW-ty-4y5"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="DAZ-5h-xrU" firstAttribute="top" secondItem="qZW-ty-4y5" secondAttribute="top" id="1wV-bg-Pue"/>
+                            <constraint firstItem="qZW-ty-4y5" firstAttribute="trailing" secondItem="X6i-Mw-viS" secondAttribute="trailing" id="Pub-8p-ZcK"/>
+                            <constraint firstItem="qZW-ty-4y5" firstAttribute="bottom" secondItem="X6i-Mw-viS" secondAttribute="bottom" id="bft-Vy-Llq"/>
+                            <constraint firstItem="X6i-Mw-viS" firstAttribute="top" secondItem="qZW-ty-4y5" secondAttribute="top" id="idb-mS-77l"/>
+                            <constraint firstItem="X6i-Mw-viS" firstAttribute="leading" secondItem="qZW-ty-4y5" secondAttribute="leading" id="jRX-T1-CUf"/>
+                            <constraint firstItem="DAZ-5h-xrU" firstAttribute="leading" secondItem="qZW-ty-4y5" secondAttribute="leading" id="wMw-1l-awQ"/>
+                            <constraint firstItem="DAZ-5h-xrU" firstAttribute="trailing" secondItem="qZW-ty-4y5" secondAttribute="trailing" id="zvH-3g-7Zf"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="AsH-Tz-meB"/>
+                    <navigationItem key="navigationItem" id="MPC-wR-BDU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBL-ko-GOs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="193" y="125"/>
+            <point key="canvasLocation" x="192.75362318840581" y="124.55357142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fLP-Hd-aCq">
+            <objects>
+                <navigationController id="7UG-UV-ndE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AxA-EM-nMH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0oJ-He-q2Z" kind="relationship" relationship="rootViewController" id="3zV-PP-UQL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C7t-Z4-l7E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-603" y="125"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Instagram Black Logo" width="175" height="50"/>
+        <image name="icn_add" width="24" height="24"/>
+        <image name="icn_share" width="24" height="24"/>
+        <image name="icn_unlike" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
