@@ -11,9 +11,11 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var storyCollectionView: UICollectionView!
     @IBOutlet weak var feedTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //???: 아래 주석 관련 코드.
+//        setLeftBarButton()
         let nib=UINib(nibName: FeedTableViewCell.identifier, bundle: nil)
         feedTableView.register(nib, forCellReuseIdentifier: FeedTableViewCell.identifier)
         
@@ -26,7 +28,15 @@ class HomeVC: UIViewController {
         storyCollectionView.delegate=self
         storyCollectionView.dataSource=self
     }
-
+    //???: 아래 코드를 작성해서 leftBarButtonItem을 넣어주려고도 해봤는데(버튼 크기 직접 조절해주고 싶어서) 왜 안되나요? 에러메세지는 없었습니다.
+//    func setLeftBarButton(){
+//        let logoButton = UIButton(type: .custom)
+//        logoButton.frame = CGRect(x: 0, y: 0, width:96, height: 27)
+//        logoButton.setImage(UIImage(named:"Instagram Black Logo"), for: .normal)
+//
+//        let navBarItem = UIBarButtonItem(customView: logoButton)
+//        self.navigationItem.leftBarButtonItem = navBarItem
+//    }
 }
 
 extension HomeVC: UITableViewDelegate {
@@ -63,9 +73,6 @@ extension HomeVC : UICollectionViewDelegateFlowLayout {
     return CGSize(width: cellWidth, height: cellHeight)
   }
   
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-    return UIEdgeInsets(top:10, left: 10, bottom: 0, right: 0)
-  }
 }
 
 extension HomeVC : UICollectionViewDataSource {

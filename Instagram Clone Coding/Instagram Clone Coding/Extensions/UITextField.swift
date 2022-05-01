@@ -9,9 +9,8 @@ import UIKit
 
 extension UITextField{
     func setPWSecureButton(){
-        // ??? button에 오른쪽 여백 주고 싶어서 이것저것 해보고 inset에 대해서도 알아봤는데 해당 기능이 이제 없어졌다고 해서 버튼을 감싸는 뷰를 만들고 그 안에 버튼을 넣었습니다. 더 간결한 방법은 없을까요??
         
-        let pwSecureButton: UIButton = UIButton(type:.custom)// custom : no button style.
+        let pwSecureButton = UIButton(type:.custom)// custom : no button style.
         pwSecureButton.frame = CGRect(x: 0, y: 5, width: 25, height: 20)
         pwSecureButton.setImage(UIImage(named: "password hidden eye icon"), for: .normal)
         pwSecureButton.addTarget(self, action:  #selector(toggleSecurityMode), for: .touchUpInside)
