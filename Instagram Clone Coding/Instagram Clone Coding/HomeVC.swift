@@ -24,7 +24,7 @@ class HomeVC: UIViewController {
 
 extension HomeVC: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 90
+    return 510
   }
 }
 
