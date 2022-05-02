@@ -7,9 +7,18 @@
 
 import UIKit
 
+protocol FeedTableViewCellDelegate : AnyObject{//범용성 위해서 일단 AnyObject로.
+    func likeButtonClicked(index: Int)
+}
+
+
 class FeedTableViewCell: UITableViewCell {
     static let identifier = "FeedTableViewCell"
-
+    
+    var index:Int = 0
+    var delegate : FeedTableViewCellDelegate?
+    //FeedTableViewCellDelegate 형의 delegate 프로퍼티 생성.
+    
     @IBOutlet weak var writerImageButton: UIButton!
     @IBOutlet weak var writerNameButton: UIButton!
     @IBOutlet weak var infoButton: UIButton!
@@ -37,5 +46,12 @@ class FeedTableViewCell: UITableViewCell {
         contentSummaryButton.setTitle(feedData.contentSummary, for: .normal)
         commentExpanderButton.setTitle(feedData.commentInfo, for: .normal)
     }
-    
+
+    @IBAction func likeButtonClicked(_ sender: UIButton) {
+        print(sender.currentImage ?? "nothing")
+        let newImage = sender.currentImage == UIImage(named: "icn_unlike") ? "icn_like" : "icn_unlike"
+        print(newImage)
+        sender.setImage(UIImage(named: newImage), for: .normal)
+        self.delegate?.likeButtonClicked(index:index)
+    }
 }

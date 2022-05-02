@@ -27,6 +27,8 @@ class HomeVC: UIViewController {
         
         storyCollectionView.delegate=self
         storyCollectionView.dataSource=self
+        
+        
     }
     //???: 아래 코드를 작성해서 leftBarButtonItem을 넣어주려고도 해봤는데(버튼 크기 직접 조절해주고 싶어서) 왜 안되나요? 에러메세지는 없었습니다.
 //    func setLeftBarButton(){
@@ -57,6 +59,8 @@ extension HomeVC: UITableViewDataSource {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell()}
     
     cell.setData(FeedDataModel.sampleData[indexPath.row])
+      cell.index=indexPath.row
+      cell.delegate=self
     
     return cell
   }
@@ -88,3 +92,14 @@ extension HomeVC : UICollectionViewDataSource {
   }
 }
 
+extension HomeVC :FeedTableViewCellDelegate {
+    func likeButtonClicked(index:Int) {
+        let alert = UIAlertController(title: "하트", message: "\(index)번 글 하트 버튼 클릭", preferredStyle: .alert)
+                
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: { _ in })
+                
+        alert.addAction(okAction)
+                
+        self.present(alert, animated: true, completion: nil)
+    }
+}

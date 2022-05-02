@@ -56,11 +56,11 @@ class TabBarController: UITabBarController {
 extension TabBarController: UITabBarControllerDelegate {
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         if item == (tabBar.items!)[2]{
-            tabBar.backgroundColor = .black
+            tabBar.barTintColor = .black
             tabBar.tintColor = .white
             tabBar.unselectedItemTintColor = .white
         }else {
-            tabBar.backgroundColor = .white
+            tabBar.barTintColor = .white
             tabBar.tintColor = .black
             tabBar.unselectedItemTintColor = .black
         }
