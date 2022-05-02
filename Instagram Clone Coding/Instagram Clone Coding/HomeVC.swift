@@ -21,13 +21,11 @@ class HomeVC: UIViewController {
         
         let nib2=UINib(nibName: StoryCollectionViewCell.identifier, bundle: nil)
         storyCollectionView.register(nib2, forCellWithReuseIdentifier: StoryCollectionViewCell.identifier)
-        
-        feedTableView.delegate=self
+    
         feedTableView.dataSource=self
         
         storyCollectionView.delegate=self
         storyCollectionView.dataSource=self
-        
         
     }
     //???: 아래 코드를 작성해서 leftBarButtonItem을 넣어주려고도 해봤는데(버튼 크기 직접 조절해주고 싶어서) 왜 안되나요? 에러메세지는 없었습니다.
@@ -43,7 +41,7 @@ class HomeVC: UIViewController {
 
 extension HomeVC: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 510
+      return UITableView.automaticDimension
   }
 }
 
@@ -59,8 +57,8 @@ extension HomeVC: UITableViewDataSource {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell()}
     
     cell.setData(FeedDataModel.sampleData[indexPath.row])
-      cell.index=indexPath.row
-      cell.delegate=self
+    cell.index=indexPath.row
+    cell.delegate=self
     
     return cell
   }

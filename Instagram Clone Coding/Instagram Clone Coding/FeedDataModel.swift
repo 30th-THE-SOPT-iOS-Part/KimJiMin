@@ -30,6 +30,7 @@ struct FeedDataModel {
 
 extension FeedDataModel {
     static let sampleData: [FeedDataModel] = [
+        FeedDataModel(writerName: "avatar6", contentImageName:"img_bg",likeNum: 9, contentSummary: "fffffff",commentNum:60),
         FeedDataModel(writerName: "avatar1", contentImageName:"postImage1",likeNum: 3, contentSummary: "aaaaaaaaaa",commentNum:9),
         FeedDataModel(writerName: "avatar2", contentImageName:"postImage2",likeNum:14, contentSummary: "bbbbbbbbbbbb",commentNum:3),
         FeedDataModel(writerName: "avatar3", contentImageName:"postImage3",likeNum: 50, contentSummary: "ccccccccccc",commentNum:20),
