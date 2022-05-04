@@ -100,14 +100,14 @@
 		4DDA29C8281C47F700B3D275 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4DF4D38527FD5CEA00405AB4 /* AppDelegate.swift */,
-				4DF4D38927FD5CEA00405AB4 /* ViewController.swift */,
-				4DF4D38727FD5CEA00405AB4 /* SceneDelegate.swift */,
 				4DF4D38E27FD5CEF00405AB4 /* Assets.xcassets */,
+				4DF4D38727FD5CEA00405AB4 /* SceneDelegate.swift */,
+				4DF4D38927FD5CEA00405AB4 /* ViewController.swift */,
+				4DF4D38527FD5CEA00405AB4 /* AppDelegate.swift */,
 				4DDA29C9281C481D00B3D275 /* Storyboards */,
 				4D5CB86C281CFF5C00DCB432 /* Extensions */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		4DDA29C9281C481D00B3D275 /* Storyboards */ = {
@@ -126,7 +126,7 @@
 				4DDA29CB281C487900B3D275 /* Cells */,
 				4DDA29CC281C488700B3D275 /* ViewControllers */,
 			);
-			name = Sources;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		4DDA29CB281C487900B3D275 /* Cells */ = {
@@ -135,7 +135,7 @@
 				4D81B19B281E476F00D5533D /* FeedTableViewCell.xib */,
 				4D81B1A5281EB64600D5533D /* StoryCollectionViewCell.xib */,
 			);
-			name = Cells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		4DDA29CC281C488700B3D275 /* ViewControllers */ = {
@@ -144,7 +144,7 @@
 				4DDA29CE281C48C100B3D275 /* Auth */,
 				4DDA29CD281C48B500B3D275 /* Main */,
 			);
-			name = ViewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		4DDA29CD281C48B500B3D275 /* Main */ = {
@@ -157,7 +157,7 @@
 				4DDA29D5281C496500B3D275 /* Shop */,
 				4DDA29D6281C496C00B3D275 /* Profile */,
 			);
-			name = Main;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		4DDA29CE281C48C100B3D275 /* Auth */ = {
@@ -168,7 +168,7 @@
 				4DF4D39D27FD5F9E00405AB4 /* SignUpPwVC.swift */,
 				4DF4D39F27FD5FB600405AB4 /* WelcomeVC.swift */,
 			);
-			name = Auth;
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		4DDA29CF281C490400B3D275 /* Auth */ = {
@@ -200,7 +200,7 @@
 			children = (
 				4D55FE10280AAEB200662058 /* TabBarController.swift */,
 			);
-			name = TabBar;
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		4DDA29D2281C494C00B3D275 /* Home */ = {
@@ -212,7 +212,7 @@
 				4D81B1A4281EB64600D5533D /* StoryCollectionViewCell.swift */,
 				4D81B1A8281EB78100D5533D /* StoryDataModel.swift */,
 			);
-			name = Home;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		4DDA29D3281C495400B3D275 /* Search */ = {
@@ -220,7 +220,7 @@
 			children = (
 				4D55FE14280AAEDB00662058 /* SearchVC.swift */,
 			);
-			name = Search;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		4DDA29D4281C495E00B3D275 /* Reels */ = {
@@ -228,7 +228,7 @@
 			children = (
 				4D55FE16280AAEEA00662058 /* ReelsVC.swift */,
 			);
-			name = Reels;
+			path = Reels;
 			sourceTree = "<group>";
 		};
 		4DDA29D5281C496500B3D275 /* Shop */ = {
@@ -236,7 +236,7 @@
 			children = (
 				4D55FE18280AAEF200662058 /* ShopVC.swift */,
 			);
-			name = Shop;
+			path = Shop;
 			sourceTree = "<group>";
 		};
 		4DDA29D6281C496C00B3D275 /* Profile */ = {
@@ -244,7 +244,7 @@
 			children = (
 				4D55FE1A280AAEFB00662058 /* ProfileVC.swift */,
 			);
-			name = Profile;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		4DF4D37927FD5CEA00405AB4 = {
