@@ -61,7 +61,6 @@ extension TabBarController: UITabBarControllerDelegate {
             tabBar.unselectedItemTintColor = .white
         }else {
             tabBar.barTintColor = .white
-            tabBar.tintColor = .black
             tabBar.unselectedItemTintColor = .black
         }
     }
