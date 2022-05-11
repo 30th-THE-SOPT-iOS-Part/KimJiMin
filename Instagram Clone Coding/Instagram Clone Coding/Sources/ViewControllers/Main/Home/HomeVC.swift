@@ -18,11 +18,11 @@ class HomeVC: UIViewController {
     }
     
     private func registerNib(){
-        let nib=UINib(nibName: FeedTableViewCell.identifier, bundle: nil)
-        feedTableView.register(nib, forCellReuseIdentifier: FeedTableViewCell.identifier)
+        let feedNib=UINib(nibName: FeedTableViewCell.identifier, bundle: nil)
+        feedTableView.register(feedNib, forCellReuseIdentifier: FeedTableViewCell.identifier)
      
-        let nib2=UINib(nibName: StoryCollectionViewCell.identifier, bundle: nil)
-        storyCollectionView.register(nib2, forCellWithReuseIdentifier: StoryCollectionViewCell.identifier)
+        let storyNib=UINib(nibName: StoryCollectionViewCell.identifier, bundle: nil)
+        storyCollectionView.register(storyNib, forCellWithReuseIdentifier: StoryCollectionViewCell.identifier)
      
         feedTableView.dataSource=self
      
