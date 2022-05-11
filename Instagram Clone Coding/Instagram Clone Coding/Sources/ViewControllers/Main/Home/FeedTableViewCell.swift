@@ -45,6 +45,8 @@ class FeedTableViewCell: UITableViewCell {
         writerNameBelowButton.setTitle(feedData.writerName, for: .normal)
         contentSummaryButton.setTitle(feedData.contentSummary, for: .normal)
         commentExpanderButton.setTitle(feedData.commentInfo, for: .normal)
+        
+        heartButton.setImage(UIImage(named: "icn_unlike"), for: .normal)
     }
 
     @IBAction func likeButtonClicked(_ sender: UIButton) {

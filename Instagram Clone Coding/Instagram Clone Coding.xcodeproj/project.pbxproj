@@ -104,7 +104,6 @@
 				4DF4D38727FD5CEA00405AB4 /* SceneDelegate.swift */,
 				4DF4D38927FD5CEA00405AB4 /* ViewController.swift */,
 				4DF4D38527FD5CEA00405AB4 /* AppDelegate.swift */,
-				4DDA29C9281C481D00B3D275 /* Storyboards */,
 				4D5CB86C281CFF5C00DCB432 /* Extensions */,
 			);
 			path = Resources;
@@ -117,12 +116,14 @@
 				4DDA29D0281C490E00B3D275 /* Main */,
 				4DDA29CF281C490400B3D275 /* Auth */,
 			);
-			path = Storyboards;
+			name = Storyboards;
+			path = ../Resources/Storyboards;
 			sourceTree = "<group>";
 		};
 		4DDA29CA281C487100B3D275 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4DDA29C9281C481D00B3D275 /* Storyboards */,
 				4DDA29CB281C487900B3D275 /* Cells */,
 				4DDA29CC281C488700B3D275 /* ViewControllers */,
 			);

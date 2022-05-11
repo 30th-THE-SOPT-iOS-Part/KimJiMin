@@ -14,29 +14,21 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //???: 아래 주석 관련 코드.
-//        setLeftBarButton()
+        registerNib()
+    }
+    
+    private func registerNib(){
         let nib=UINib(nibName: FeedTableViewCell.identifier, bundle: nil)
         feedTableView.register(nib, forCellReuseIdentifier: FeedTableViewCell.identifier)
-        
+     
         let nib2=UINib(nibName: StoryCollectionViewCell.identifier, bundle: nil)
         storyCollectionView.register(nib2, forCellWithReuseIdentifier: StoryCollectionViewCell.identifier)
-    
+     
         feedTableView.dataSource=self
-        
+     
         storyCollectionView.delegate=self
         storyCollectionView.dataSource=self
-        
     }
-    //???: 아래 코드를 작성해서 leftBarButtonItem을 넣어주려고도 해봤는데(버튼 크기 직접 조절해주고 싶어서) 왜 안되나요? 에러메세지는 없었습니다.
-//    func setLeftBarButton(){
-//        let logoButton = UIButton(type: .custom)
-//        logoButton.frame = CGRect(x: 0, y: 0, width:96, height: 27)
-//        logoButton.setImage(UIImage(named:"Instagram Black Logo"), for: .normal)
-//
-//        let navBarItem = UIBarButtonItem(customView: logoButton)
-//        self.navigationItem.leftBarButtonItem = navBarItem
-//    }
 }
 
 extension HomeVC: UITableViewDelegate {
