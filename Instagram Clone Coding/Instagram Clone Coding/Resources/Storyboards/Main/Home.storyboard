@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7UG-UV-ndE">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="5jR-xi-57m">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="0oJ-He-q2Z" userLabel="Home" customClass="HomeVC" customModule="Instagram_Clone_Coding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Z9-KZ-qI2">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6i-Mw-viS">
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUy-4h-IqW">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1000"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mOo-Rh-3YR">
+                                                <rect key="frame" x="0.0" y="50" width="390" height="950"/>
+                                                <subviews>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="b9n-v9-SJJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="85"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="85" id="GOe-X7-P17"/>
+                                                        </constraints>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="C0V-By-GuM">
+                                                            <size key="itemSize" width="128" height="128"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCollectionViewCell" id="3ll-tu-4Q5">
+                                                                <rect key="frame" x="0.0" y="-21.666666666666668" width="128" height="128"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XqM-Od-Z3J">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </collectionViewCellContentView>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                    </collectionView>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wZb-JB-38a">
+                                                        <rect key="frame" x="0.0" y="85" width="390" height="865"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </tableView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="Q7A-5v-LG1"/>
+                                            <constraint firstAttribute="bottom" secondItem="mOo-Rh-3YR" secondAttribute="bottom" id="Tjy-tx-MkW"/>
+                                            <constraint firstAttribute="trailing" secondItem="mOo-Rh-3YR" secondAttribute="trailing" id="V2X-9L-gJz"/>
+                                            <constraint firstItem="mOo-Rh-3YR" firstAttribute="top" secondItem="pUy-4h-IqW" secondAttribute="top" constant="50" id="fJt-kO-3AE"/>
+                                            <constraint firstItem="mOo-Rh-3YR" firstAttribute="leading" secondItem="pUy-4h-IqW" secondAttribute="leading" id="kL0-lw-NuI"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pUy-4h-IqW" firstAttribute="width" secondItem="v7c-ch-fDm" secondAttribute="width" id="6Nz-ea-1pd"/>
+                                    <constraint firstItem="pUy-4h-IqW" firstAttribute="bottom" secondItem="vvY-rf-UBe" secondAttribute="bottom" id="JeV-cm-4IQ"/>
+                                    <constraint firstItem="pUy-4h-IqW" firstAttribute="trailing" secondItem="vvY-rf-UBe" secondAttribute="trailing" id="SNz-Tl-uAM"/>
+                                    <constraint firstItem="pUy-4h-IqW" firstAttribute="top" secondItem="vvY-rf-UBe" secondAttribute="top" id="fij-Ca-trc"/>
+                                    <constraint firstItem="pUy-4h-IqW" firstAttribute="leading" secondItem="vvY-rf-UBe" secondAttribute="leading" id="saK-IS-hua"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="vvY-rf-UBe"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="v7c-ch-fDm"/>
+                            </scrollView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAZ-5h-xrU">
+                                <rect key="frame" x="0.0" y="88" width="390" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="igr-j9-1FK"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="wmF-PM-ANR">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="4IN-Yg-H6K">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="JLg-IE-PUD">
+                                                <rect key="frame" x="16" y="0.0" width="175" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <inset key="imageEdgeInsets" minX="-6" minY="12" maxX="75" maxY="6"/>
+                                                <state key="normal" image="Instagram Black Logo"/>
+                                            </button>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="Share" id="lxV-dz-V4J">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fbp-NX-lWG" userLabel="Share">
+                                                    <rect key="frame" x="350" y="10" width="24" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="icn_share"/>
+                                                </button>
+                                            </barButtonItem>
+                                            <barButtonItem title="Heart" id="Xum-lm-dG6">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFk-dP-Dy9" userLabel="Heart">
+                                                    <rect key="frame" x="313" y="10" width="29" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="icn_unlike"/>
+                                                </button>
+                                            </barButtonItem>
+                                            <barButtonItem title="Add" id="a8n-cC-2T6">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ku6-sa-rBE" userLabel="Add">
+                                                    <rect key="frame" x="274" y="10" width="31" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="icn_add"/>
+                                                </button>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qZW-ty-4y5"/>
+                        <constraints>
+                            <constraint firstItem="DAZ-5h-xrU" firstAttribute="top" secondItem="qZW-ty-4y5" secondAttribute="top" id="1wV-bg-Pue"/>
+                            <constraint firstItem="qZW-ty-4y5" firstAttribute="trailing" secondItem="X6i-Mw-viS" secondAttribute="trailing" id="Pub-8p-ZcK"/>
+                            <constraint firstItem="qZW-ty-4y5" firstAttribute="bottom" secondItem="X6i-Mw-viS" secondAttribute="bottom" id="bft-Vy-Llq"/>
+                            <constraint firstItem="X6i-Mw-viS" firstAttribute="top" secondItem="qZW-ty-4y5" secondAttribute="top" id="idb-mS-77l"/>
+                            <constraint firstItem="X6i-Mw-viS" firstAttribute="leading" secondItem="qZW-ty-4y5" secondAttribute="leading" id="jRX-T1-CUf"/>
+                            <constraint firstItem="DAZ-5h-xrU" firstAttribute="leading" secondItem="qZW-ty-4y5" secondAttribute="leading" id="wMw-1l-awQ"/>
+                            <constraint firstItem="DAZ-5h-xrU" firstAttribute="trailing" secondItem="qZW-ty-4y5" secondAttribute="trailing" id="zvH-3g-7Zf"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="AsH-Tz-meB"/>
+                    <navigationItem key="navigationItem" id="MPC-wR-BDU"/>
+                    <connections>
+                        <outlet property="feedTableView" destination="wZb-JB-38a" id="EOa-dJ-ebf"/>
+                        <outlet property="storyCollectionView" destination="b9n-v9-SJJ" id="BSW-JU-eOr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aBL-ko-GOs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192.75362318840581" y="124.55357142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fLP-Hd-aCq">
+            <objects>
+                <navigationController id="7UG-UV-ndE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AxA-EM-nMH">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0oJ-He-q2Z" kind="relationship" relationship="rootViewController" id="3zV-PP-UQL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C7t-Z4-l7E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-603" y="125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Instagram Black Logo" width="175" height="50"/>
+        <image name="icn_add" width="24" height="24"/>
+        <image name="icn_share" width="24" height="24"/>
+        <image name="icn_unlike" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
