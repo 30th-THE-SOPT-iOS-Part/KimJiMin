@@ -19,15 +19,7 @@ class SignInVC: UIViewController {
     }
     
     @IBAction func loginButtonClicked(_ sender: Any) {
-        
-        let welcomeSB = UIStoryboard(name: "Welcome", bundle: nil)
-        guard let welcomeVC = welcomeSB.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
-        
-        welcomeVC.name = nameTextField.text
-        welcomeVC.modalTransitionStyle = .crossDissolve
-        welcomeVC.modalPresentationStyle = .fullScreen
-        
-        self.present(welcomeVC,animated: true)
+        login()
     }
     
     @IBAction func gotoSignUpClicked(_ sender: Any) {
@@ -46,5 +38,50 @@ class SignInVC: UIViewController {
     
     @objc func textFieldDidChange(_ sender:Any?) -> Void {
         loginButton.isEnabled = nameTextField.hasText && passwordTextField.hasText
+    }
+}
+extension SignInVC {
+    func login() {
+        
+        guard let name = nameTextField.text,
+              let password = passwordTextField.text
+        else { return }
+        
+        UserService.shared.login(
+            name: name,
+            email: name,
+            password: password) { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? LoginResponse else { return }
+                print(data)
+                self.alert(message: data.message)
+            case .requestErr(let err):
+                print(err)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    
+    func alert(message: String) {
+        print("alert function")
+        let alertVC = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: { action in
+            self.okActionHandler()
+        })
+        alertVC.addAction(okAction)
+        present(alertVC, animated: true)
+    }
+    
+    func okActionHandler(){
+        var mainView: UIStoryboard!
+                  mainView = UIStoryboard(name: "TabBar", bundle: nil)
+        let tabBarController = mainView.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        self.view.window?.rootViewController = tabBarController
     }
 }
