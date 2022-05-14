@@ -12,11 +12,13 @@ class WelcomeVC: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     var name: String?
+    var password:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setName()
     }
+    
     @IBAction func gotoLoginClicked(_ sender: Any) {
         guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
         self.view.window?.rootViewController?.dismiss(animated: false){
@@ -24,9 +26,8 @@ class WelcomeVC: UIViewController {
     }
     
     @IBAction func completeLoginClicked(_ sender: Any) {
-        let tabBarSB = UIStoryboard(name: "TabBar", bundle: nil)
-        let tabBarController = tabBarSB.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
-        self.view.window?.rootViewController = tabBarController
+        signUp()
+        
     }
 
     private func setName(){
@@ -36,4 +37,48 @@ class WelcomeVC: UIViewController {
         }
     }
 
+}
+extension WelcomeVC {
+    func signUp() {
+        
+        guard let name = name,
+              let password = password
+        else { return }
+        
+        UserService.shared.signUp(
+            name: name,
+            email: name,
+            password: password) { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? SignUpResponse else { return }
+                print(data)
+                self.alert(message: data.message)
+            case .requestErr(let err):
+                print(err)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    
+    func alert(message: String) {
+        print("alert function")
+        let alertVC = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: { action in
+            self.okActionHandler()
+        })
+        alertVC.addAction(okAction)
+        present(alertVC, animated: true)
+    }
+    
+    func okActionHandler(){
+        guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
+        self.view.window?.rootViewController?.dismiss(animated: false){
+                   presentingVC.popToRootViewController(animated: true)}
+    }
 }

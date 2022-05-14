@@ -10,6 +10,7 @@ import UIKit
 class SignUpPwVC: UIViewController {
     
     var name: String?
+    var password: String?
     
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
@@ -26,6 +27,7 @@ class SignUpPwVC: UIViewController {
         welcomeVC.modalTransitionStyle = .crossDissolve
         welcomeVC.modalPresentationStyle = .fullScreen
         welcomeVC.name = name
+        welcomeVC.password = passwordTextField.text
         self.present(welcomeVC,animated: true)
     }
     
