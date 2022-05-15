@@ -66,7 +66,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="로그인"/>
                                 <connections>
-                                    <action selector="loginButtonClicked:" destination="1BQ-Kc-foU" eventType="touchUpInside" id="A83-wd-YUT"/>
+                                    <action selector="signInButtonClicked:" destination="1BQ-Kc-foU" eventType="touchUpInside" id="edO-K5-fap"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kF5-Cw-aHW">
@@ -110,9 +110,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="FtL-XB-0Vc"/>
                     <connections>
-                        <outlet property="loginButton" destination="GLK-R8-Hdh" id="ts9-We-Ex8"/>
                         <outlet property="nameTextField" destination="qsV-lt-dTL" id="f6j-bo-A2b"/>
                         <outlet property="passwordTextField" destination="PuY-Lv-5ME" id="WaY-wK-ehd"/>
+                        <outlet property="signInButton" destination="GLK-R8-Hdh" id="bkI-2h-PI3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1E-is-vvf" sceneMemberID="firstResponder"/>

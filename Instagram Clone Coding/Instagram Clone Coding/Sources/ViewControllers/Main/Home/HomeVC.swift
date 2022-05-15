@@ -86,7 +86,7 @@ extension HomeVC :FeedTableViewCellDelegate {
     func likeButtonClicked(index:Int) {
         let alert = UIAlertController(title: "하트", message: "\(index)번 글 하트 버튼 클릭", preferredStyle: .alert)
                 
-        let okAction = UIAlertAction(title: "확인", style: .default, handler: { _ in })
+        let okAction = UIAlertAction(title: "확인", style: .default)
                 
         alert.addAction(okAction)
                 

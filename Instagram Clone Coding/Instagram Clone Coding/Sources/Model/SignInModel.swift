@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct LoginResponse: Codable {
+struct SignInResponse: Codable {
     let status: Int
     let success: Bool
     let message: String
-    let data: LoginData?
+    let data: SignInData?
 }
 
-struct LoginData: Codable {
+struct SignInData: Codable {
     let email: String
     let name: String
 }

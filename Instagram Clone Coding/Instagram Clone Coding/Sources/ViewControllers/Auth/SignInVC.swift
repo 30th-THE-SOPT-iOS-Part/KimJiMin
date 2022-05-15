@@ -11,15 +11,15 @@ class SignInVC: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTargets()
     }
     
-    @IBAction func loginButtonClicked(_ sender: Any) {
-        login()
+    @IBAction func signInButtonClicked(_ sender: Any) {
+        signIn()
     }
     
     @IBAction func gotoSignUpClicked(_ sender: Any) {
@@ -37,23 +37,23 @@ class SignInVC: UIViewController {
     }
     
     @objc func textFieldDidChange(_ sender:Any?) -> Void {
-        loginButton.isEnabled = nameTextField.hasText && passwordTextField.hasText
+        signInButton.isEnabled = nameTextField.hasText && passwordTextField.hasText
     }
 }
 extension SignInVC {
-    func login() {
+    func signIn() {
         
         guard let name = nameTextField.text,
               let password = passwordTextField.text
         else { return }
         
-        UserService.shared.login(
+        SignInService.shared.signIn(
             name: name,
             email: name,
             password: password) { response in
             switch response {
             case .success(let data):
-                guard let data = data as? LoginResponse else { return }
+                guard let data = data as? SignInResponse else { return }
                 print(data)
                 self.alert(message: data.message)
             case .requestErr(let err):

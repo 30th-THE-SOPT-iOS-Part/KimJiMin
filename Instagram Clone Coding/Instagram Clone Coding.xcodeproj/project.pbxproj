@@ -31,8 +31,11 @@
 		4D900BB9283026B800D37822 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D900BB8283026B800D37822 /* SignUpModel.swift */; };
 		4D93592028301C8500903C12 /* APIContstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93591F28301C8500903C12 /* APIContstants.swift */; };
 		4D93592228301CC200903C12 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93592128301CC200903C12 /* NetworkResult.swift */; };
-		4D93592528301D6200903C12 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93592428301D6200903C12 /* UserService.swift */; };
-		4D93592828301F6900903C12 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93592728301F6900903C12 /* LoginModel.swift */; };
+		4D93592528301D6200903C12 /* SignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93592428301D6200903C12 /* SignInService.swift */; };
+		4D93592828301F6900903C12 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93592728301F6900903C12 /* SignInModel.swift */; };
+		4DBFFD0328304AE2009AED9D /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFFD0228304AE2009AED9D /* ImageModel.swift */; };
+		4DBFFD052830B48F009AED9D /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFFD042830B48F009AED9D /* SignUpService.swift */; };
+		4DBFFD072830B4A4009AED9D /* FeedImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFFD062830B4A4009AED9D /* FeedImageService.swift */; };
 		4DDA29DA281C4BF600B3D275 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDA29D9281C4BF600B3D275 /* Welcome.storyboard */; };
 		4DF4D38627FD5CEA00405AB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D38527FD5CEA00405AB4 /* AppDelegate.swift */; };
 		4DF4D38827FD5CEA00405AB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D38727FD5CEA00405AB4 /* SceneDelegate.swift */; };
@@ -72,8 +75,11 @@
 		4D900BB8283026B800D37822 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		4D93591F28301C8500903C12 /* APIContstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIContstants.swift; sourceTree = "<group>"; };
 		4D93592128301CC200903C12 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
-		4D93592428301D6200903C12 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		4D93592728301F6900903C12 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		4D93592428301D6200903C12 /* SignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInService.swift; sourceTree = "<group>"; };
+		4D93592728301F6900903C12 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		4DBFFD0228304AE2009AED9D /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		4DBFFD042830B48F009AED9D /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		4DBFFD062830B4A4009AED9D /* FeedImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageService.swift; sourceTree = "<group>"; };
 		4DDA29D9281C4BF600B3D275 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		4DF4D38227FD5CEA00405AB4 /* Instagram Clone Coding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instagram Clone Coding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF4D38527FD5CEA00405AB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,7 +130,9 @@
 		4D93592328301D4400903C12 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				4D93592428301D6200903C12 /* UserService.swift */,
+				4D93592428301D6200903C12 /* SignInService.swift */,
+				4DBFFD042830B48F009AED9D /* SignUpService.swift */,
+				4DBFFD062830B4A4009AED9D /* FeedImageService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -132,8 +140,9 @@
 		4D93592628301F5F00903C12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4D93592728301F6900903C12 /* LoginModel.swift */,
+				4D93592728301F6900903C12 /* SignInModel.swift */,
 				4D900BB8283026B800D37822 /* SignUpModel.swift */,
+				4DBFFD0228304AE2009AED9D /* ImageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -467,9 +476,11 @@
 				4D93592028301C8500903C12 /* APIContstants.swift in Sources */,
 				4D900BB9283026B800D37822 /* SignUpModel.swift in Sources */,
 				4D55FE13280AAECE00662058 /* HomeVC.swift in Sources */,
-				4D93592828301F6900903C12 /* LoginModel.swift in Sources */,
+				4D93592828301F6900903C12 /* SignInModel.swift in Sources */,
+				4DBFFD072830B4A4009AED9D /* FeedImageService.swift in Sources */,
 				4D55FE17280AAEEA00662058 /* ReelsVC.swift in Sources */,
 				4D55FE11280AAEB200662058 /* TabBarController.swift in Sources */,
+				4DBFFD0328304AE2009AED9D /* ImageModel.swift in Sources */,
 				4D81B19C281E476F00D5533D /* FeedTableViewCell.swift in Sources */,
 				4DF4D38627FD5CEA00405AB4 /* AppDelegate.swift in Sources */,
 				4D55FE15280AAEDB00662058 /* SearchVC.swift in Sources */,
@@ -479,10 +490,11 @@
 				4D93592228301CC200903C12 /* NetworkResult.swift in Sources */,
 				4D5CB86E281CFF7C00DCB432 /* UITextField.swift in Sources */,
 				4D81B1A3281E645100D5533D /* FeedDataModel.swift in Sources */,
-				4D93592528301D6200903C12 /* UserService.swift in Sources */,
+				4D93592528301D6200903C12 /* SignInService.swift in Sources */,
 				4DF4D39A27FD5D2E00405AB4 /* SignInVC.swift in Sources */,
 				4D55FE19280AAEF200662058 /* ShopVC.swift in Sources */,
 				4D55FE1B280AAEFB00662058 /* ProfileVC.swift in Sources */,
+				4DBFFD052830B48F009AED9D /* SignUpService.swift in Sources */,
 				4DF4D3A027FD5FB600405AB4 /* WelcomeVC.swift in Sources */,
 				4D81B1A6281EB64600D5533D /* StoryCollectionViewCell.swift in Sources */,
 				4D81B1A9281EB78100D5533D /* StoryDataModel.swift in Sources */,

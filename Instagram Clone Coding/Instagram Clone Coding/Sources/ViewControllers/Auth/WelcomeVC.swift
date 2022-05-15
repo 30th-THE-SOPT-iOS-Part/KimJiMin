@@ -45,7 +45,7 @@ extension WelcomeVC {
               let password = password
         else { return }
         
-        UserService.shared.signUp(
+        SignUpService.shared.signUp(
             name: name,
             email: name,
             password: password) { response in
