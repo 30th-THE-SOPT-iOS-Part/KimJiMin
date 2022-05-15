@@ -40,7 +40,7 @@ class SignUpService {
                       let value = response.value
                 else { return }
                 
-                let networkResult = self.judgeSignUpStatus(by: statusCode, value)
+                let networkResult = self.judgeStatus(by: statusCode, value)
                 completion(networkResult)
             
             case .failure:
@@ -49,17 +49,17 @@ class SignUpService {
         }
     }
     
-    private func judgeSignUpStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
+    private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         print("judgeSignUpStatus")
         switch statusCode {
-        case ..<300: return isValidSignUpData(data: data)
+        case ..<300: return isValidData(data: data)
         case 400..<500: return .pathErr
         case 500..<600: return .serverErr
         default: return .networkFail
         }
     }
     
-    private func isValidSignUpData(data: Data) -> NetworkResult<Any> {
+    private func isValidData(data: Data) -> NetworkResult<Any> {
         print("isValidSignUpData")
         let decoder = JSONDecoder()
         print("isValidSignUpData after decoding")

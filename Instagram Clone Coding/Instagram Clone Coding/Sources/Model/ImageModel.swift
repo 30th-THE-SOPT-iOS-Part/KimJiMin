@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct FeedImageResponse: Codable {
+    let urls: URLs?
+}
+
+struct URLs: Codable {
+    let regular: URL
+}
+

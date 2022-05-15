@@ -23,7 +23,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="gotoLoginClicked:" destination="lre-b6-uqs" eventType="touchUpInside" id="I2k-js-67X"/>
+                                    <action selector="gotoSignInClicked:" destination="lre-b6-uqs" eventType="touchUpInside" id="Tnv-27-SvK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jS3-LF-T09">
@@ -35,11 +35,11 @@
                                 <state key="normal" title="완료하기"/>
                                 <buttonConfiguration key="configuration" style="filled" title="완료하기"/>
                                 <connections>
-                                    <action selector="completeLoginClicked:" destination="lre-b6-uqs" eventType="touchUpInside" id="uO3-mh-7U6"/>
+                                    <action selector="completeSignInClicked:" destination="lre-b6-uqs" eventType="touchUpInside" id="Znz-ot-zR8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNC-ql-QZU">
-                                <rect key="frame" x="75" y="354" width="264" height="27.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNC-ql-QZU">
+                                <rect key="frame" x="40" y="354" width="334" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -59,13 +59,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dXt-3R-jdW" firstAttribute="leading" secondItem="IEt-tU-Drh" secondAttribute="leading" constant="113" id="Cf7-qo-mev"/>
+                            <constraint firstItem="jNC-ql-QZU" firstAttribute="leading" secondItem="IEt-tU-Drh" secondAttribute="leading" constant="40" id="HMF-MU-EXx"/>
                             <constraint firstItem="IEt-tU-Drh" firstAttribute="trailing" secondItem="v9m-aB-ZMn" secondAttribute="trailing" constant="35" id="HhR-4v-Qdt"/>
-                            <constraint firstItem="jNC-ql-QZU" firstAttribute="leading" secondItem="IEt-tU-Drh" secondAttribute="leading" constant="75" id="JhZ-IG-V41"/>
                             <constraint firstItem="jNC-ql-QZU" firstAttribute="top" secondItem="IEt-tU-Drh" secondAttribute="top" constant="310" id="RWf-fc-RaT"/>
                             <constraint firstItem="jS3-LF-T09" firstAttribute="leading" secondItem="IEt-tU-Drh" secondAttribute="leading" constant="37" id="WM6-Ds-NUB"/>
                             <constraint firstItem="IEt-tU-Drh" firstAttribute="trailing" secondItem="jS3-LF-T09" secondAttribute="trailing" constant="37" id="gXa-XW-MjM"/>
                             <constraint firstItem="v9m-aB-ZMn" firstAttribute="top" secondItem="jNC-ql-QZU" secondAttribute="bottom" constant="16" id="icb-f6-fOb"/>
-                            <constraint firstItem="IEt-tU-Drh" firstAttribute="trailing" secondItem="jNC-ql-QZU" secondAttribute="trailing" constant="75" id="lkO-NE-bnV"/>
+                            <constraint firstItem="jNC-ql-QZU" firstAttribute="centerX" secondItem="DYM-Pm-2Hy" secondAttribute="centerX" id="lCZ-bz-MNT"/>
+                            <constraint firstItem="IEt-tU-Drh" firstAttribute="trailing" secondItem="jNC-ql-QZU" secondAttribute="trailing" constant="40" id="mX7-d1-MUg"/>
                             <constraint firstItem="jS3-LF-T09" firstAttribute="top" secondItem="v9m-aB-ZMn" secondAttribute="bottom" constant="30" id="n3O-fN-95H"/>
                             <constraint firstItem="v9m-aB-ZMn" firstAttribute="leading" secondItem="IEt-tU-Drh" secondAttribute="leading" constant="35" id="q7A-fi-vXf"/>
                             <constraint firstItem="IEt-tU-Drh" firstAttribute="trailing" secondItem="dXt-3R-jdW" secondAttribute="trailing" constant="112" id="wcn-qT-zBe"/>

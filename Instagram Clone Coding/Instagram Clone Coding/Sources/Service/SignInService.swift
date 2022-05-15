@@ -51,7 +51,7 @@ class SignInService {
     
 
     private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
-        print("judgeSignUpStatus")
+        print("judgeSignInStatus")
         switch statusCode {
         case ..<300: return isValidData(data: data)
         case 400..<500: return .pathErr
@@ -61,9 +61,9 @@ class SignInService {
     }
     
     private func isValidData(data: Data) -> NetworkResult<Any> {
-        print("isValidSignUpData")
+        print("isValidSignInData")
         let decoder = JSONDecoder()
-        print("isValidSignUpData after decoding")
+        print("isValidSignInData after decoding")
         guard let decodedData = try? decoder.decode(SignInResponse.self, from: data)
         else { return .pathErr }
         

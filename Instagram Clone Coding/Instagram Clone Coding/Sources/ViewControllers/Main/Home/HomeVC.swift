@@ -11,10 +11,12 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var storyCollectionView: UICollectionView!
     @IBOutlet weak var feedTableView: UITableView!
+    var feedImageArray: [FeedImageResponse]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNib()
+        fetchFeedImage()
     }
     
     private func registerNib(){
@@ -29,6 +31,7 @@ class HomeVC: UIViewController {
         storyCollectionView.delegate=self
         storyCollectionView.dataSource=self
     }
+    
 }
 
 extension HomeVC: UITableViewDelegate {
@@ -41,11 +44,9 @@ extension HomeVC: UITableViewDataSource {
     
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return FeedDataModel.sampleData.count
-      //섹션마다 몇 개의 행을 넣을 것인지
   }
     
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      //어떤 행을 어떻게 보여줄 것인지
     guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell()}
     
     cell.setData(FeedDataModel.sampleData[indexPath.row])
@@ -73,10 +74,12 @@ extension HomeVC : UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return StoryDataModel.sampleData.count
   }
+    
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as?  StoryCollectionViewCell else {
       return UICollectionViewCell()
     }
+      
       cell.setData(StoryDataModel.sampleData[indexPath.row])
     return cell
   }
@@ -91,5 +94,27 @@ extension HomeVC :FeedTableViewCellDelegate {
         alert.addAction(okAction)
                 
         self.present(alert, animated: true, completion: nil)
+    }
+}
+
+extension HomeVC {
+
+    func fetchFeedImage() {
+        
+        FeedImageService.shared.fetchImage() { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? FeedImageResponse else { return }
+                print(data)
+            case .requestErr(let err):
+                print(err)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
     }
 }
