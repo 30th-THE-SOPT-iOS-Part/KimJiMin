@@ -12,7 +12,7 @@ protocol FeedTableViewCellDelegate : AnyObject{//범용성 위해서 일단 AnyO
 }
 
 
-class FeedTableViewCell: UITableViewCell {
+final class FeedTableViewCell: UITableViewCell {
     
     var index:Int = 0
     var delegate : FeedTableViewCellDelegate?

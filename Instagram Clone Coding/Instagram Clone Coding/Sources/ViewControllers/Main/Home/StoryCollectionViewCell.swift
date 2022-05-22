@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StoryCollectionViewCell: UICollectionViewCell {
+final class StoryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var storyButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
