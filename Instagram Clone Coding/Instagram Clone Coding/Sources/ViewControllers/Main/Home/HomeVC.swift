@@ -20,11 +20,11 @@ class HomeVC: UIViewController {
     }
     
     private func registerNib(){
-        let feedNib=UINib(nibName: FeedTableViewCell.identifier, bundle: nil)
-        feedTableView.register(feedNib, forCellReuseIdentifier: FeedTableViewCell.identifier)
+        let feedNib=UINib(nibName: FeedTableViewCell.reuseIdentifier, bundle: nil)
+        feedTableView.register(feedNib, forCellReuseIdentifier: FeedTableViewCell.reuseIdentifier)
      
-        let storyNib=UINib(nibName: StoryCollectionViewCell.identifier, bundle: nil)
-        storyCollectionView.register(storyNib, forCellWithReuseIdentifier: StoryCollectionViewCell.identifier)
+        let storyNib=UINib(nibName: StoryCollectionViewCell.reuseIdentifier, bundle: nil)
+        storyCollectionView.register(storyNib, forCellWithReuseIdentifier: StoryCollectionViewCell.reuseIdentifier)
      
         feedTableView.dataSource=self
      
@@ -47,7 +47,7 @@ extension HomeVC: UITableViewDataSource {
   }
     
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell()}
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.reuseIdentifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell()}
     
     cell.setData(FeedDataModel.sampleData[indexPath.row])
     cell.index=indexPath.row
@@ -60,10 +60,9 @@ extension HomeVC: UITableViewDataSource {
 
 extension HomeVC : UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    let width = UIScreen.main.bounds.width
     
-    let cellWidth = width * (58/375)
-    let cellHeight = cellWidth * (72/58)
+      let cellWidth = 58.adjustedWidth
+      let cellHeight = 72.adjustedHeight
     
     return CGSize(width: cellWidth, height: cellHeight)
   }
@@ -76,7 +75,7 @@ extension HomeVC : UICollectionViewDataSource {
   }
     
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as?  StoryCollectionViewCell else {
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.reuseIdentifier, for: indexPath) as?  StoryCollectionViewCell else {
       return UICollectionViewCell()
     }
       

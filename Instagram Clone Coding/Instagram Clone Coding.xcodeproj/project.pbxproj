@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D242492283AC318004777BA /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D242491283AC318004777BA /* Reusable.swift */; };
+		4D242494283AC470004777BA /* Adjusted+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D242493283AC470004777BA /* Adjusted+.swift */; };
 		4D55FE0F280AAD2300662058 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D55FE0E280AAD2200662058 /* TabBar.storyboard */; };
 		4D55FE11280AAEB200662058 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55FE10280AAEB200662058 /* TabBarController.swift */; };
 		4D55FE13280AAECE00662058 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55FE12280AAECE00662058 /* HomeVC.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		4D242491283AC318004777BA /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		4D242493283AC470004777BA /* Adjusted+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjusted+.swift"; sourceTree = "<group>"; };
 		4D55FE0E280AAD2200662058 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		4D55FE10280AAEB200662058 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4D55FE12280AAECE00662058 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				4D5CB86D281CFF7C00DCB432 /* UITextField+.swift */,
+				4D242493283AC470004777BA /* Adjusted+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				4D81B1A3281E645100D5533D /* FeedDataModel.swift in Sources */,
 				4D93592528301D6200903C12 /* SignInService.swift in Sources */,
 				4DF4D39A27FD5D2E00405AB4 /* SignInVC.swift in Sources */,
+				4D242494283AC470004777BA /* Adjusted+.swift in Sources */,
 				4D55FE19280AAEF200662058 /* ShopVC.swift in Sources */,
 				4D55FE1B280AAEFB00662058 /* ProfileVC.swift in Sources */,
 				4DBFFD052830B48F009AED9D /* SignUpService.swift in Sources */,
