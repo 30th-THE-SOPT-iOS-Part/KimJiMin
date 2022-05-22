@@ -16,11 +16,11 @@ class TabBarController: UITabBarController {
     func setTabBarController(){
         tabBar.unselectedItemTintColor = .black
 
-        guard let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeVC")as? HomeVC ,
-              let searchVC = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "SearchVC")as? SearchVC,
-              let reelsVC = UIStoryboard(name: "Reels", bundle: nil).instantiateViewController(withIdentifier: "ReelsVC")as? ReelsVC,
-              let shopVC = UIStoryboard(name: "Shop", bundle: nil).instantiateViewController(withIdentifier: "ShopVC")as? ShopVC,
-              let profileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileVC")as? ProfileVC
+        guard let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: HomeVC.reuseIdentifier)as? HomeVC ,
+              let searchVC = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: SearchVC.reuseIdentifier)as? SearchVC,
+              let reelsVC = UIStoryboard(name: "Reels", bundle: nil).instantiateViewController(withIdentifier: ReelsVC.reuseIdentifier)as? ReelsVC,
+              let shopVC = UIStoryboard(name: "Shop", bundle: nil).instantiateViewController(withIdentifier: ShopVC.reuseIdentifier)as? ShopVC,
+              let profileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: ProfileVC.reuseIdentifier)as? ProfileVC
         else {return}
         
         homeVC.tabBarItem = UITabBarItem(

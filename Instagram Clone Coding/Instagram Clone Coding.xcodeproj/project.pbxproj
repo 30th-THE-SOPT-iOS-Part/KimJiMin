@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D242492283AC318004777BA /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D242491283AC318004777BA /* Reusable.swift */; };
 		4D55FE0F280AAD2300662058 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D55FE0E280AAD2200662058 /* TabBar.storyboard */; };
 		4D55FE11280AAEB200662058 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55FE10280AAEB200662058 /* TabBarController.swift */; };
 		4D55FE13280AAECE00662058 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55FE12280AAECE00662058 /* HomeVC.swift */; };
@@ -21,7 +22,7 @@
 		4D5CB867281CECC000DCB432 /* Reels.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5CB866281CECC000DCB432 /* Reels.storyboard */; };
 		4D5CB869281CECCC00DCB432 /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5CB868281CECCC00DCB432 /* Shop.storyboard */; };
 		4D5CB86B281CECD600DCB432 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5CB86A281CECD600DCB432 /* Profile.storyboard */; };
-		4D5CB86E281CFF7C00DCB432 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5CB86D281CFF7C00DCB432 /* UITextField.swift */; };
+		4D5CB86E281CFF7C00DCB432 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5CB86D281CFF7C00DCB432 /* UITextField+.swift */; };
 		4D81B19C281E476F00D5533D /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81B19A281E476F00D5533D /* FeedTableViewCell.swift */; };
 		4D81B19D281E476F00D5533D /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D81B19B281E476F00D5533D /* FeedTableViewCell.xib */; };
 		4D81B1A3281E645100D5533D /* FeedDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81B1A2281E645100D5533D /* FeedDataModel.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D242491283AC318004777BA /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		4D55FE0E280AAD2200662058 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		4D55FE10280AAEB200662058 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4D55FE12280AAECE00662058 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -65,7 +67,7 @@
 		4D5CB866281CECC000DCB432 /* Reels.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reels.storyboard; sourceTree = "<group>"; };
 		4D5CB868281CECCC00DCB432 /* Shop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
 		4D5CB86A281CECD600DCB432 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		4D5CB86D281CFF7C00DCB432 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		4D5CB86D281CFF7C00DCB432 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		4D81B19A281E476F00D5533D /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		4D81B19B281E476F00D5533D /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		4D81B1A2281E645100D5533D /* FeedDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataModel.swift; sourceTree = "<group>"; };
@@ -110,10 +112,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D242490283AC308004777BA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4D242491283AC318004777BA /* Reusable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		4D5CB86C281CFF5C00DCB432 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4D5CB86D281CFF7C00DCB432 /* UITextField.swift */,
+				4D5CB86D281CFF7C00DCB432 /* UITextField+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -150,6 +160,7 @@
 		4DDA29C8281C47F700B3D275 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4D242490283AC308004777BA /* Protocols */,
 				4DF4D38E27FD5CEF00405AB4 /* Assets.xcassets */,
 				4DF4D38727FD5CEA00405AB4 /* SceneDelegate.swift */,
 				4DF4D38927FD5CEA00405AB4 /* ViewController.swift */,
@@ -484,11 +495,12 @@
 				4D81B19C281E476F00D5533D /* FeedTableViewCell.swift in Sources */,
 				4DF4D38627FD5CEA00405AB4 /* AppDelegate.swift in Sources */,
 				4D55FE15280AAEDB00662058 /* SearchVC.swift in Sources */,
+				4D242492283AC318004777BA /* Reusable.swift in Sources */,
 				4DF4D38827FD5CEA00405AB4 /* SceneDelegate.swift in Sources */,
 				4DF4D39C27FD5D6700405AB4 /* SignUpNameVC.swift in Sources */,
 				4DF4D39E27FD5F9E00405AB4 /* SignUpPwVC.swift in Sources */,
 				4D93592228301CC200903C12 /* NetworkResult.swift in Sources */,
-				4D5CB86E281CFF7C00DCB432 /* UITextField.swift in Sources */,
+				4D5CB86E281CFF7C00DCB432 /* UITextField+.swift in Sources */,
 				4D81B1A3281E645100D5533D /* FeedDataModel.swift in Sources */,
 				4D93592528301D6200903C12 /* SignInService.swift in Sources */,
 				4DF4D39A27FD5D2E00405AB4 /* SignInVC.swift in Sources */,
