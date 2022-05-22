@@ -45,12 +45,12 @@ final class FeedTableViewCell: UITableViewCell {
         contentSummaryButton.setTitle(feedData.contentSummary, for: .normal)
         commentExpanderButton.setTitle(feedData.commentInfo, for: .normal)
         
-        heartButton.setImage(UIImage(named: "icn_unlike"), for: .normal)
+        heartButton.setImage(Const.Image.icn_unlike, for: .normal)
     }
 
     @IBAction func likeButtonClicked(_ sender: UIButton) {
         print(sender.currentImage ?? "nothing")
-        let newImage = sender.currentImage == UIImage(named: "icn_unlike") ? "icn_like" : "icn_unlike"
+        let newImage = sender.currentImage == Const.Image.icn_unlike ? "icn_like" : "icn_unlike"
         print(newImage)
         sender.setImage(UIImage(named: newImage), for: .normal)
         self.delegate?.likeButtonClicked(index:index)

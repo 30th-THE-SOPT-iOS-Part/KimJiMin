@@ -25,28 +25,28 @@ class TabBarController: UITabBarController {
         
         homeVC.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "icn_home"),
-            selectedImage: UIImage(named: "icn_home_selected")
+            image: Const.Image.icn_home,
+            selectedImage: Const.Image.icn_home_selected
         )
         searchVC.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "icn_search"),
-            selectedImage: UIImage(named: "icn_search_selected")
+            image: Const.Image.icn_search,
+            selectedImage: Const.Image.icn_search_selected
         )
         reelsVC.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "icn_reels"),
-            selectedImage: UIImage(named: "icn_reels_selected")
+            image: Const.Image.icn_reels,
+            selectedImage: Const.Image.icn_reels_selected
         )
         shopVC.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "icn_shop"),
-            selectedImage: UIImage(named: "icn_shop_selected")
+            image: Const.Image.icn_shop,
+            selectedImage: Const.Image.icn_shop_selected
         )
         profileVC.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "icn_profile"),
-            selectedImage: UIImage(named: "icn_profile_selected")
+            image: Const.Image.icn_profile,
+            selectedImage: Const.Image.icn_profile_selected
         )
         
         setViewControllers([homeVC,searchVC,reelsVC,shopVC,profileVC], animated: true)
