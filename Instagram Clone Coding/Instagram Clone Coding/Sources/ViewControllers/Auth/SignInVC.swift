@@ -9,26 +9,18 @@ import UIKit
 
 final class SignInVC: UIViewController {
 
+    // MARK: - Properties
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setTargets()
     }
     
-    @IBAction func signInButtonClicked(_ sender: UIButton) {
-        signIn()
-    }
-    
-    @IBAction func gotoSignUpClicked(_ sender: UIButton) {
-        let signUpNameSB = UIStoryboard(name: "SignUpName", bundle: nil)
-        guard let signUpNameVC = signUpNameSB.instantiateViewController(withIdentifier: SignUpNameVC.reuseIdentifier) as? SignUpNameVC else {return}
-        
-        self.navigationController?.pushViewController(signUpNameVC, animated: true)
-    }
-    
+    //MARK: - Functions
     func setTargets() {
         [nameTextField, passwordTextField].forEach {
               $0?.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
@@ -39,7 +31,21 @@ final class SignInVC: UIViewController {
     @objc func textFieldDidChange(_ sender:Any?) -> Void {
         signInButton.isEnabled = nameTextField.hasText && passwordTextField.hasText
     }
+    
+    // MARK: - @IBAction Properties
+    @IBAction func signInButtonClicked(_ sender: UIButton) {
+        signIn()
+    }
+    
+    @IBAction func gotoSignUpClicked(_ sender: UIButton) {
+        let signUpNameSB = UIStoryboard(name: "SignUpName", bundle: nil)
+        guard let signUpNameVC = signUpNameSB.instantiateViewController(withIdentifier: SignUpNameVC.reuseIdentifier) as? SignUpNameVC else {return}
+        
+        self.navigationController?.pushViewController(signUpNameVC, animated: true)
+    }
 }
+
+// MARK: - Extensions
 extension SignInVC {
     func signIn() {
         

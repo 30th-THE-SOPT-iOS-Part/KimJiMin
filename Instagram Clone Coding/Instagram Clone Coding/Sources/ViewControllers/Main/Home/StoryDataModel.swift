@@ -14,6 +14,7 @@ struct StoryDataModel {
     }
 }
 
+// MARK: - Extensions
 extension StoryDataModel {
   static let sampleData: [StoryDataModel] = [
     StoryDataModel(userName: "avatar1"),

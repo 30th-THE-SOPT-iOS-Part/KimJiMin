@@ -8,11 +8,14 @@
 import UIKit
 
 final class TabBarController: UITabBarController {
+    
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setTabBarController()
     }
 
+    //MARK: - Functions
     func setTabBarController(){
         tabBar.unselectedItemTintColor = .black
 
@@ -53,6 +56,7 @@ final class TabBarController: UITabBarController {
     }
 }
 
+// MARK: - Extensions
 extension TabBarController: UITabBarControllerDelegate {
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         if item == (tabBar.items!)[2]{

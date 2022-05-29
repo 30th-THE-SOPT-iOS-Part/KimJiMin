@@ -28,6 +28,7 @@ struct FeedDataModel {
 
 }
 
+// MARK: - Extensions
 extension FeedDataModel {
     static let sampleData: [FeedDataModel] = [
         FeedDataModel(writerName: "avatar6", contentImageName:"img_bg",likeNum: 9, contentSummary: "fffffff",commentNum:60),

@@ -9,16 +9,19 @@ import UIKit
 
 final class HomeVC: UIViewController {
 
+    // MARK: - Properties
     @IBOutlet weak var storyCollectionView: UICollectionView!
     @IBOutlet weak var feedTableView: UITableView!
     var feedImageArray: [FeedImageResponse]?
     
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNib()
         fetchFeedImage()
     }
     
+    //MARK: - Functions
     private func registerNib(){
         let feedNib=UINib(nibName: FeedTableViewCell.reuseIdentifier, bundle: nil)
         feedTableView.register(feedNib, forCellReuseIdentifier: FeedTableViewCell.reuseIdentifier)
@@ -34,6 +37,7 @@ final class HomeVC: UIViewController {
     
 }
 
+// MARK: - Extensions
 extension HomeVC: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
       return UITableView.automaticDimension

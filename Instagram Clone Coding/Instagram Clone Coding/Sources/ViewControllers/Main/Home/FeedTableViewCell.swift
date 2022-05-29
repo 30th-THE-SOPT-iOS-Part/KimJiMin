@@ -14,6 +14,7 @@ protocol FeedTableViewCellDelegate : AnyObject{//범용성 위해서 일단 AnyO
 
 final class FeedTableViewCell: UITableViewCell {
     
+    // MARK: - Properties
     var index:Int = 0
     var delegate : FeedTableViewCellDelegate?
     //FeedTableViewCellDelegate 형의 delegate 프로퍼티 생성.
@@ -31,11 +32,12 @@ final class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var contentSummaryButton: UIButton!
     @IBOutlet weak var commentExpanderButton: UIButton!
     
-    
+    //MARK: - View Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
+    //MARK: - Functions
     func setData(_ feedData: FeedDataModel){
         writerImageButton.setImage(feedData.writerImage, for: .normal)
         writerNameButton.setTitle(feedData.writerName, for: .normal)
@@ -48,6 +50,7 @@ final class FeedTableViewCell: UITableViewCell {
         heartButton.setImage(Const.Image.icn_unlike, for: .normal)
     }
 
+    // MARK: - @IBAction Properties
     @IBAction func likeButtonClicked(_ sender: UIButton) {
         print(sender.currentImage ?? "nothing")
         let newImage = sender.currentImage == Const.Image.icn_unlike ? "icn_like" : "icn_unlike"

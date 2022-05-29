@@ -9,16 +9,26 @@ import UIKit
 
 final class WelcomeVC: UIViewController {
 
+    // MARK: - Properties
     @IBOutlet weak var nameLabel: UILabel!
     
     var name: String?
     var password:String?
     
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setName()
     }
     
+    //MARK: - Functions
+    private func setName(){
+        if let name = name {
+            nameLabel.text = "\(name)님 Instagram에 오신 것을 환영합니다"
+        }
+    }
+    
+    // MARK: - @IBAction Properties
     @IBAction func gotoSignInClicked(_ sender: UIButton) {
         guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
         self.view.window?.rootViewController?.dismiss(animated: false){
@@ -29,14 +39,9 @@ final class WelcomeVC: UIViewController {
         signUp()
         
     }
-
-    private func setName(){
-        if let name = name {
-            nameLabel.text = "\(name)님 Instagram에 오신 것을 환영합니다"
-        }
-    }
-
 }
+
+// MARK: - Extensions
 extension WelcomeVC {
     func signUp() {
         
