@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+final class HomeVC: UIViewController {
 
     @IBOutlet weak var storyCollectionView: UICollectionView!
     @IBOutlet weak var feedTableView: UITableView!

@@ -7,8 +7,8 @@
 
 import UIKit
 
-class SignUpPwVC: UIViewController {
-    
+final class SignUpPwVC: UIViewController {
+    //MARK: - Pro
     var name: String?
     var password: String?
     
@@ -20,9 +20,9 @@ class SignUpPwVC: UIViewController {
         setTargets()
     }
     
-    @IBAction func gotoWelcomeClicked(_ sender: Any) {
+    @IBAction func gotoWelcomeClicked(_ sender: UIButton) {
         let welcomeSB = UIStoryboard(name: "Welcome", bundle: nil)
-        guard let welcomeVC = welcomeSB.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
+        guard let welcomeVC = welcomeSB.instantiateViewController(withIdentifier: WelcomeVC.reuseIdentifier) as? WelcomeVC else {return}
         
         welcomeVC.modalTransitionStyle = .crossDissolve
         welcomeVC.modalPresentationStyle = .fullScreen

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpNameVC: UIViewController {
+final class SignUpNameVC: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
@@ -17,9 +17,9 @@ class SignUpNameVC: UIViewController {
         addTargetTextField()
     }
     
-    @IBAction func gotoPWClicked(_ sender: Any) {
+    @IBAction func gotoPWClicked(_ sender: UIButton) {
         let signUpPwSB = UIStoryboard(name: "SignUpPw", bundle: nil)
-        guard let signUpPwVC = signUpPwSB.instantiateViewController(withIdentifier: "SignUpPwVC") as? SignUpPwVC else {return}
+        guard let signUpPwVC = signUpPwSB.instantiateViewController(withIdentifier: SignUpPwVC.reuseIdentifier) as? SignUpPwVC else {return}
 
         signUpPwVC.name = nameTextField.text
 

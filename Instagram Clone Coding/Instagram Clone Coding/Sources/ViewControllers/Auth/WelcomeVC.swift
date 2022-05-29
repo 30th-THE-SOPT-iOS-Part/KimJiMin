@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WelcomeVC: UIViewController {
+final class WelcomeVC: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -19,13 +19,13 @@ class WelcomeVC: UIViewController {
         setName()
     }
     
-    @IBAction func gotoSignInClicked(_ sender: Any) {
+    @IBAction func gotoSignInClicked(_ sender: UIButton) {
         guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
         self.view.window?.rootViewController?.dismiss(animated: false){
             presentingVC.popToRootViewController(animated: true)}
     }
     
-    @IBAction func completeSignInClicked(_ sender: Any) {
+    @IBAction func completeSignInClicked(_ sender: UIButton) {
         signUp()
         
     }

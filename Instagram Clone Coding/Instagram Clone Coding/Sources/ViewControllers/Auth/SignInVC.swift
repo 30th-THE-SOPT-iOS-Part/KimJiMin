@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignInVC: UIViewController {
+final class SignInVC: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -18,13 +18,13 @@ class SignInVC: UIViewController {
         setTargets()
     }
     
-    @IBAction func signInButtonClicked(_ sender: Any) {
+    @IBAction func signInButtonClicked(_ sender: UIButton) {
         signIn()
     }
     
-    @IBAction func gotoSignUpClicked(_ sender: Any) {
+    @IBAction func gotoSignUpClicked(_ sender: UIButton) {
         let signUpNameSB = UIStoryboard(name: "SignUpName", bundle: nil)
-        guard let signUpNameVC = signUpNameSB.instantiateViewController(withIdentifier: "SignUpNameVC") as? SignUpNameVC else {return}
+        guard let signUpNameVC = signUpNameSB.instantiateViewController(withIdentifier: SignUpNameVC.reuseIdentifier) as? SignUpNameVC else {return}
         
         self.navigationController?.pushViewController(signUpNameVC, animated: true)
     }
@@ -81,7 +81,7 @@ extension SignInVC {
     func okActionHandler(){
         var mainView: UIStoryboard!
                   mainView = UIStoryboard(name: "TabBar", bundle: nil)
-        let tabBarController = mainView.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        let tabBarController = mainView.instantiateViewController(withIdentifier: TabBarController.reuseIdentifier) as! UITabBarController
         self.view.window?.rootViewController = tabBarController
     }
 }

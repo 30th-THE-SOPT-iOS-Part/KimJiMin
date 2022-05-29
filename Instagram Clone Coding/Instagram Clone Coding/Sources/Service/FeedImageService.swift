@@ -9,7 +9,7 @@ import Foundation
 
 import Alamofire
 
-class FeedImageService {
+final class FeedImageService {
     static let shared = FeedImageService()
     private init() {}
     

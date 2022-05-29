@@ -9,7 +9,7 @@ import Foundation
 
 import Alamofire
 
-class SignInService {
+final class SignInService {
     static let shared = SignInService()
     private init() {}
     
