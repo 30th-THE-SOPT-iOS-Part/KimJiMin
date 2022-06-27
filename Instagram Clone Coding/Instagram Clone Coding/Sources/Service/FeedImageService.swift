@@ -19,7 +19,7 @@ final class FeedImageService {
         let header: HTTPHeaders = ["Content-Type" : "application/json"]
         let queryParam = [
             "page" : 2,
-            "limit":100
+            "limit":20
         ]
                 
         let dataRequest = AF.request(url,

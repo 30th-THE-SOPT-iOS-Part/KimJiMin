@@ -12,7 +12,7 @@ final class HomeVC: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var storyCollectionView: UICollectionView!
     @IBOutlet weak var feedTableView: UITableView!
-    var feedImageArray: [ImageModel]=[]
+//    var feedImageArray: [ImageModel]=[]
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -53,7 +53,7 @@ extension HomeVC: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.reuseIdentifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell()}
     print(indexPath.row)
-    cell.setData(FeedDataModel.sampleData[indexPath.row],feedImageArray[indexPath.row])
+    cell.setData(FeedDataModel.sampleData[indexPath.row])
     cell.index=indexPath.row
 //    cell.imageData=feedImageArray[indexPath.row]
     cell.delegate=self
@@ -108,8 +108,15 @@ extension HomeVC {
         FeedImageService.shared.fetchImage() { response in
             switch response {
             case .success(let data):
-                guard let data = data as? FeedImageResponse else { return }
-                self.feedImageArray=data.images
+//                print("SUCCESS")
+//                print("DATA",data)
+                guard let data = data as? [ImageModel] else { return }
+//                print("DATA as FeedImageResponse",data)
+//                self.feedImageArray=data
+//                print(self.feedImageArray)
+                for i in 0..<FeedDataModel.sampleData.count {
+                    FeedDataModel.sampleData[i].url = data[i].download_url
+                }
                 self.feedTableView.reloadData()
                 print(data)
             case .requestErr(let err):

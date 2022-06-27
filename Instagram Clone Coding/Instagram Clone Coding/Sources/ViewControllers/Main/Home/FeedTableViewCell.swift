@@ -38,12 +38,12 @@ final class FeedTableViewCell: UITableViewCell {
     }
 
     //MARK: - Functions
-    func setData(_ feedData: FeedDataModel,_ imageData:ImageModel){
+    func setData(_ feedData: FeedDataModel){
         writerImageButton.setImage(feedData.writerImage, for: .normal)
         writerNameButton.setTitle(feedData.writerName, for: .normal)
         
 //        contentImage.image=imageData?.download_url
-        contentImage.load(url: URL(string:imageData.download_url)!)
+        contentImage.load(feedData.url)
         likeInfoButton.setTitle(feedData.likeInfo, for: .normal)
         writerNameBelowButton.setTitle(feedData.writerName, for: .normal)
         contentSummaryButton.setTitle(feedData.contentSummary, for: .normal)
