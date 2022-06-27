@@ -18,7 +18,8 @@ final class FeedImageService {
         let url = APIConstants.feedImageURL
         let header: HTTPHeaders = ["Content-Type" : "application/json"]
         let queryParam = [
-            "client_id" : APIConstants.clientID
+            "page" : 2,
+            "limit":100
         ]
                 
         let dataRequest = AF.request(url,
@@ -46,24 +47,31 @@ final class FeedImageService {
 
     private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
 //        print("judgeFetchAPIStatus")
-        dump(data)
+//        dump(data)
+//        print(statusCode)
         switch statusCode {
-        case ..<300: return isValidData(data: data)
-        case 400..<500: return .pathErr
+        case ..<300: return isValidData(in: data)
+        case 400..<500: return isUsedPathErr(in: data)
         case 500..<600: return .serverErr
         default: return .networkFail
         }
     }
     
-    private func isValidData(data: Data) -> NetworkResult<Any> {
+    private func isValidData(in data: Data) -> NetworkResult<Any> {
 //        print("isValidFetchAPIData")
         let decoder = JSONDecoder()
 //        print("isValidFetchAPIData after decoding")
-        dump(data)
-        guard let decodedData = try? decoder.decode(FeedImageResponse.self, from: data)
+//        dump(data)
+        guard let decodedData = try? decoder.decode([ImageModel].self, from: data)
         else { return .pathErr }
         
         return .success(decodedData as Any)
     }
     
+    private func isUsedPathErr(in data:Data)-> NetworkResult<Any> {
+        let decoder = JSONDecoder()
+        guard let decodedData = try? decoder.decode([ImageModel].self, from: data)
+        else { return .pathErr }
+        return .requestErr(decodedData)
+    }
 }

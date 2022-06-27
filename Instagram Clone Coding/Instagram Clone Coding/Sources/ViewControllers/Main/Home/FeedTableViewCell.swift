@@ -16,7 +16,8 @@ final class FeedTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     var index:Int = 0
-    var delegate : FeedTableViewCellDelegate?
+    var delegate: FeedTableViewCellDelegate?
+//    var imageData:ImageModel?
     
     @IBOutlet weak var writerImageButton: UIButton!
     @IBOutlet weak var writerNameButton: UIButton!
@@ -37,10 +38,12 @@ final class FeedTableViewCell: UITableViewCell {
     }
 
     //MARK: - Functions
-    func setData(_ feedData: FeedDataModel){
+    func setData(_ feedData: FeedDataModel,_ imageData:ImageModel){
         writerImageButton.setImage(feedData.writerImage, for: .normal)
         writerNameButton.setTitle(feedData.writerName, for: .normal)
-        contentImage.image=feedData.contentImage
+        
+//        contentImage.image=imageData?.download_url
+        contentImage.load(url: URL(string:imageData.download_url)!)
         likeInfoButton.setTitle(feedData.likeInfo, for: .normal)
         writerNameBelowButton.setTitle(feedData.writerName, for: .normal)
         contentSummaryButton.setTitle(feedData.contentSummary, for: .normal)

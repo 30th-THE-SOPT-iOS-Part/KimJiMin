@@ -12,7 +12,7 @@ final class HomeVC: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var storyCollectionView: UICollectionView!
     @IBOutlet weak var feedTableView: UITableView!
-    var feedImageArray: [FeedImageResponse]?
+    var feedImageArray: [ImageModel]=[]
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -52,9 +52,10 @@ extension HomeVC: UITableViewDataSource {
     
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.reuseIdentifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell()}
-    
-    cell.setData(FeedDataModel.sampleData[indexPath.row])
+    print(indexPath.row)
+    cell.setData(FeedDataModel.sampleData[indexPath.row],feedImageArray[indexPath.row])
     cell.index=indexPath.row
+//    cell.imageData=feedImageArray[indexPath.row]
     cell.delegate=self
     
     return cell
@@ -108,6 +109,8 @@ extension HomeVC {
             switch response {
             case .success(let data):
                 guard let data = data as? FeedImageResponse else { return }
+                self.feedImageArray=data.images
+                self.feedTableView.reloadData()
                 print(data)
             case .requestErr(let err):
                 print(err)
