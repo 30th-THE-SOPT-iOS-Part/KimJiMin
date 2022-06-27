@@ -28,7 +28,7 @@ final class FeedImageService {
                                      headers: header)
     
         dataRequest.responseData { response in
-            print(response)
+            print("RESPONSE:",response)
             switch response.result {
             case .success:
                 guard let statusCode = response.response?.statusCode,
@@ -45,7 +45,8 @@ final class FeedImageService {
     
 
     private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
-        print("judgeFetchAPIStatus")
+//        print("judgeFetchAPIStatus")
+        dump(data)
         switch statusCode {
         case ..<300: return isValidData(data: data)
         case 400..<500: return .pathErr
@@ -55,9 +56,10 @@ final class FeedImageService {
     }
     
     private func isValidData(data: Data) -> NetworkResult<Any> {
-        print("isValidFetchAPIData")
+//        print("isValidFetchAPIData")
         let decoder = JSONDecoder()
-        print("isValidFetchAPIData after decoding")
+//        print("isValidFetchAPIData after decoding")
+        dump(data)
         guard let decodedData = try? decoder.decode(FeedImageResponse.self, from: data)
         else { return .pathErr }
         

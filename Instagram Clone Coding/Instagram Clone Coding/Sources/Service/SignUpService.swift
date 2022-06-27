@@ -60,9 +60,7 @@ final class SignUpService {
     }
     
     private func isValidData(data: Data) -> NetworkResult<Any> {
-        print("isValidSignUpData")
         let decoder = JSONDecoder()
-        print("isValidSignUpData after decoding")
         guard let decodedData = try? decoder.decode(SignUpResponse.self, from: data)
         else { return .pathErr }
         

@@ -27,6 +27,7 @@
 		4D5CB869281CECCC00DCB432 /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5CB868281CECCC00DCB432 /* Shop.storyboard */; };
 		4D5CB86B281CECD600DCB432 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5CB86A281CECD600DCB432 /* Profile.storyboard */; };
 		4D5CB86E281CFF7C00DCB432 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5CB86D281CFF7C00DCB432 /* UITextField+.swift */; };
+		4D6935B12869AB44001AAFF8 /* Pods_Instagram_Clone_Coding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680E0FBAE9EAA79A6C53C8F8 /* Pods_Instagram_Clone_Coding.framework */; };
 		4D81B19C281E476F00D5533D /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81B19A281E476F00D5533D /* FeedTableViewCell.swift */; };
 		4D81B19D281E476F00D5533D /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D81B19B281E476F00D5533D /* FeedTableViewCell.xib */; };
 		4D81B1A3281E645100D5533D /* FeedDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81B1A2281E645100D5533D /* FeedDataModel.swift */; };
@@ -52,7 +53,6 @@
 		4DF4D39C27FD5D6700405AB4 /* SignUpNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39B27FD5D6700405AB4 /* SignUpNameVC.swift */; };
 		4DF4D39E27FD5F9E00405AB4 /* SignUpPwVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39D27FD5F9E00405AB4 /* SignUpPwVC.swift */; };
 		4DF4D3A027FD5FB600405AB4 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4D39F27FD5FB600405AB4 /* WelcomeVC.swift */; };
-		91305F7F179C10BD28EE58D9 /* Pods_Instagram_Clone_Coding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680E0FBAE9EAA79A6C53C8F8 /* Pods_Instagram_Clone_Coding.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91305F7F179C10BD28EE58D9 /* Pods_Instagram_Clone_Coding.framework in Frameworks */,
+				4D6935B12869AB44001AAFF8 /* Pods_Instagram_Clone_Coding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +682,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T24N5ZR2DS;
+				EXCLUDED_ARCHS = arm64;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Instagram Clone Coding/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -711,6 +713,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T24N5ZR2DS;
+				EXCLUDED_ARCHS = arm64;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Instagram Clone Coding/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

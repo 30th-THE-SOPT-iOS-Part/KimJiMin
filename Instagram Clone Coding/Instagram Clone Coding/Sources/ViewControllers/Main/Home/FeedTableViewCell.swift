@@ -17,7 +17,6 @@ final class FeedTableViewCell: UITableViewCell {
     // MARK: - Properties
     var index:Int = 0
     var delegate : FeedTableViewCellDelegate?
-    //FeedTableViewCellDelegate 형의 delegate 프로퍼티 생성.
     
     @IBOutlet weak var writerImageButton: UIButton!
     @IBOutlet weak var writerNameButton: UIButton!
