@@ -46,9 +46,6 @@ final class FeedImageService {
     
 
     private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
-//        print("judgeFetchAPIStatus")
-//        dump(data)
-//        print(statusCode)
         switch statusCode {
         case ..<300: return isValidData(in: data)
         case 400..<500: return isUsedPathErr(in: data)
@@ -58,10 +55,7 @@ final class FeedImageService {
     }
     
     private func isValidData(in data: Data) -> NetworkResult<Any> {
-//        print("isValidFetchAPIData")
         let decoder = JSONDecoder()
-//        print("isValidFetchAPIData after decoding")
-//        dump(data)
         guard let decodedData = try? decoder.decode([ImageModel].self, from: data)
         else { return .pathErr }
         

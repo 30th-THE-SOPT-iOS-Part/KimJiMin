@@ -11,27 +11,15 @@ struct FeedImageResponse: Codable {
     let images:[ImageModel]
 }
 
+//Lorem Picsum API 이용 시
 struct ImageModel : Codable{
-//    let regular: String
-//    let urls:URLs?
-//    let id : String
-//    let author: String
-//    let width:Int
-//    let height:Int
-//    let url:String
     let download_url:String
-    
-    
-//    let created_at:String
-//    let updated_at:String
-//    let promoted_at: String?
-    
-//    let color:String
-//    let blur_hash:String?
-//    let description:String?
-//    let alt_description:String?
-    
 }
+
+//struct ImageModel : Codable{
+//    let urls:URLs?
+    
+//}
 //struct URLs: Codable {
 //    let regular: String
 //}

@@ -12,7 +12,6 @@ final class HomeVC: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var storyCollectionView: UICollectionView!
     @IBOutlet weak var feedTableView: UITableView!
-//    var feedImageArray: [ImageModel]=[]
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -55,7 +54,6 @@ extension HomeVC: UITableViewDataSource {
     print(indexPath.row)
     cell.setData(FeedDataModel.sampleData[indexPath.row])
     cell.index=indexPath.row
-//    cell.imageData=feedImageArray[indexPath.row]
     cell.delegate=self
     
     return cell
@@ -108,12 +106,7 @@ extension HomeVC {
         FeedImageService.shared.fetchImage() { response in
             switch response {
             case .success(let data):
-//                print("SUCCESS")
-//                print("DATA",data)
                 guard let data = data as? [ImageModel] else { return }
-//                print("DATA as FeedImageResponse",data)
-//                self.feedImageArray=data
-//                print(self.feedImageArray)
                 for i in 0..<FeedDataModel.sampleData.count {
                     FeedDataModel.sampleData[i].url = data[i].download_url
                 }

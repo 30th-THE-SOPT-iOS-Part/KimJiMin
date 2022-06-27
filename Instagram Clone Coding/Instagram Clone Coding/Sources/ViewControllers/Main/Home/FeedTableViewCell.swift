@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol FeedTableViewCellDelegate : AnyObject{//범용성 위해서 일단 AnyObject로.
+protocol FeedTableViewCellDelegate : AnyObject{
     func likeButtonClicked(index: Int)
 }
 
@@ -17,7 +17,6 @@ final class FeedTableViewCell: UITableViewCell {
     // MARK: - Properties
     var index:Int = 0
     var delegate: FeedTableViewCellDelegate?
-//    var imageData:ImageModel?
     
     @IBOutlet weak var writerImageButton: UIButton!
     @IBOutlet weak var writerNameButton: UIButton!
@@ -41,8 +40,6 @@ final class FeedTableViewCell: UITableViewCell {
     func setData(_ feedData: FeedDataModel){
         writerImageButton.setImage(feedData.writerImage, for: .normal)
         writerNameButton.setTitle(feedData.writerName, for: .normal)
-        
-//        contentImage.image=imageData?.download_url
         contentImage.load(feedData.url)
         likeInfoButton.setTitle(feedData.likeInfo, for: .normal)
         writerNameBelowButton.setTitle(feedData.writerName, for: .normal)
