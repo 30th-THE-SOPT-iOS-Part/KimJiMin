@@ -19,5 +19,5 @@ struct APIConstants {
     //MARK: Unsplash API
     static let unsplashBaseURL = "https://api.unsplash.com"
     static let feedImageURL_unsplash = unsplashBaseURL + "/photos"
-    static let clientID = "63gOlG9aUrjOLBAnAcqPRZ16eDwDdP_aGFm7Fw1oMQI"
+    
 }

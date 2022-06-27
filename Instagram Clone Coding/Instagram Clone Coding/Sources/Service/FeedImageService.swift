@@ -28,7 +28,7 @@ final class FeedImageService {
         //MARK: Unsplash API
         let url = APIConstants.feedImageURL_unsplash
         let queryParam = [
-            "client_id" : APIConstants.clientID
+            "client_id" : APIConstants_SECRET_KEY.clientID
         ]
                 
         let dataRequest = AF.request(url,
