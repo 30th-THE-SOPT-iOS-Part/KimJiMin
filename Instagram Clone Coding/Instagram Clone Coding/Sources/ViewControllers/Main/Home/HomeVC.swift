@@ -107,9 +107,17 @@ extension HomeVC {
             switch response {
             case .success(let data):
                 guard let data = data as? [ImageModel] else { return }
+                
+                //MARK: Lorem Picsum API
+//                for i in 0..<FeedDataModel.sampleData.count {
+//                    FeedDataModel.sampleData[i].url = data[i].download_url
+//                }
+                
+                //MARK: Unsplash API
                 for i in 0..<FeedDataModel.sampleData.count {
-                    FeedDataModel.sampleData[i].url = data[i].download_url
+                    FeedDataModel.sampleData[i].url = data[i].urls.regular
                 }
+                
                 self.feedTableView.reloadData()
                 print(data)
             case .requestErr(let err):

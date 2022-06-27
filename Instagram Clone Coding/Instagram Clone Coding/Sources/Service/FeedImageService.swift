@@ -15,11 +15,20 @@ final class FeedImageService {
     
     func fetchImage( completion: @escaping (NetworkResult<Any>) -> Void)
     {
-        let url = APIConstants.feedImageURL
+        
         let header: HTTPHeaders = ["Content-Type" : "application/json"]
+        
+//        MARK: Lorem Picsum API
+//        let url = APIConstants.feedImageURL
+//        let queryParam = [
+//                 "page" : 2,
+//                 "limit":20
+//             ]
+        
+        //MARK: Unsplash API
+        let url = APIConstants.feedImageURL_unsplash
         let queryParam = [
-            "page" : 2,
-            "limit":20
+            "client_id" : APIConstants.clientID
         ]
                 
         let dataRequest = AF.request(url,
@@ -36,6 +45,7 @@ final class FeedImageService {
                       let value = response.value
                 else { return }
                 let networkResult = self.judgeStatus(by: statusCode, value)
+                print(statusCode)
                 completion(networkResult)
             
             case .failure:

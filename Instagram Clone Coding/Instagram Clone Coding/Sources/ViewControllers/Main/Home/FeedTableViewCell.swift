@@ -51,9 +51,7 @@ final class FeedTableViewCell: UITableViewCell {
 
     // MARK: - @IBAction Properties
     @IBAction func likeButtonClicked(_ sender: UIButton) {
-        print(sender.currentImage ?? "nothing")
         let newImage = sender.currentImage == Const.Image.icn_unlike ? "icn_like" : "icn_unlike"
-        print(newImage)
         sender.setImage(UIImage(named: newImage), for: .normal)
         self.delegate?.likeButtonClicked(index:index)
     }

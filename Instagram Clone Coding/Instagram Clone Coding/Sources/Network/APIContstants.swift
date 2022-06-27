@@ -12,8 +12,12 @@ struct APIConstants {
     static let signInURL = baseURL + "/auth/signin"
     static let signUpURL = baseURL + "/auth/signup"
     
-    //Lorem Picsum API 이용 시 
+    //MARK: Lorem Picsum API
     static let picsumBaseURL = "https://picsum.photos"
     static let feedImageURL = picsumBaseURL + "/v2/list"
-
+    
+    //MARK: Unsplash API
+    static let unsplashBaseURL = "https://api.unsplash.com"
+    static let feedImageURL_unsplash = unsplashBaseURL + "/photos"
+    static let clientID = "63gOlG9aUrjOLBAnAcqPRZ16eDwDdP_aGFm7Fw1oMQI"
 }

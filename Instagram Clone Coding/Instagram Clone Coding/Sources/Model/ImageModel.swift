@@ -11,16 +11,17 @@ struct FeedImageResponse: Codable {
     let images:[ImageModel]
 }
 
-//Lorem Picsum API 이용 시
+//MARK: Lorem Picsum API
+//struct ImageModel : Codable{
+//    let download_url:String
+//}
+
+//MARK: Unsplash API
 struct ImageModel : Codable{
-    let download_url:String
+    let urls: URLs
 }
 
-//struct ImageModel : Codable{
-//    let urls:URLs?
-    
-//}
-//struct URLs: Codable {
-//    let regular: String
-//}
+struct URLs: Codable {
+    let regular: String
+}
 
