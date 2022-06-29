@@ -17,6 +17,10 @@ final class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNib()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         fetchFeedImage()
     }
     
@@ -51,7 +55,7 @@ extension HomeVC: UITableViewDataSource {
     
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.reuseIdentifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell()}
-    print(indexPath.row)
+      
     cell.setData(FeedDataModel.sampleData[indexPath.row])
     cell.index=indexPath.row
     cell.delegate=self
