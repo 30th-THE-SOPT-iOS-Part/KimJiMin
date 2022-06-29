@@ -7,17 +7,16 @@
 
 import UIKit
 
-protocol FeedTableViewCellDelegate : AnyObject{//범용성 위해서 일단 AnyObject로.
+protocol FeedTableViewCellDelegate : AnyObject{
     func likeButtonClicked(index: Int)
 }
 
 
-class FeedTableViewCell: UITableViewCell {
-    static let identifier = "FeedTableViewCell"
+final class FeedTableViewCell: UITableViewCell {
     
+    // MARK: - Properties
     var index:Int = 0
-    var delegate : FeedTableViewCellDelegate?
-    //FeedTableViewCellDelegate 형의 delegate 프로퍼티 생성.
+    var delegate: FeedTableViewCellDelegate?
     
     @IBOutlet weak var writerImageButton: UIButton!
     @IBOutlet weak var writerNameButton: UIButton!
@@ -32,27 +31,27 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var contentSummaryButton: UIButton!
     @IBOutlet weak var commentExpanderButton: UIButton!
     
-    
+    //MARK: - View Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
+    //MARK: - Functions
     func setData(_ feedData: FeedDataModel){
         writerImageButton.setImage(feedData.writerImage, for: .normal)
         writerNameButton.setTitle(feedData.writerName, for: .normal)
-        contentImage.image=feedData.contentImage
+        contentImage.load(feedData.url)
         likeInfoButton.setTitle(feedData.likeInfo, for: .normal)
         writerNameBelowButton.setTitle(feedData.writerName, for: .normal)
         contentSummaryButton.setTitle(feedData.contentSummary, for: .normal)
         commentExpanderButton.setTitle(feedData.commentInfo, for: .normal)
         
-        heartButton.setImage(UIImage(named: "icn_unlike"), for: .normal)
+        heartButton.setImage(Const.Image.icn_unlike, for: .normal)
     }
 
+    // MARK: - @IBAction Properties
     @IBAction func likeButtonClicked(_ sender: UIButton) {
-        print(sender.currentImage ?? "nothing")
-        let newImage = sender.currentImage == UIImage(named: "icn_unlike") ? "icn_like" : "icn_unlike"
-        print(newImage)
+        let newImage = sender.currentImage == Const.Image.icn_unlike ? "icn_like" : "icn_unlike"
         sender.setImage(UIImage(named: newImage), for: .normal)
         self.delegate?.likeButtonClicked(index:index)
     }

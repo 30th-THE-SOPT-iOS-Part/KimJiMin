@@ -7,36 +7,20 @@
 
 import UIKit
 
-class SignInVC: UIViewController {
+final class SignInVC: UIViewController {
 
+    // MARK: - Properties
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
     
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setTargets()
     }
     
-    @IBAction func loginButtonClicked(_ sender: Any) {
-        
-        let welcomeSB = UIStoryboard(name: "Welcome", bundle: nil)
-        guard let welcomeVC = welcomeSB.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
-        
-        welcomeVC.name = nameTextField.text
-        welcomeVC.modalTransitionStyle = .crossDissolve
-        welcomeVC.modalPresentationStyle = .fullScreen
-        
-        self.present(welcomeVC,animated: true)
-    }
-    
-    @IBAction func gotoSignUpClicked(_ sender: Any) {
-        let signUpNameSB = UIStoryboard(name: "SignUpName", bundle: nil)
-        guard let signUpNameVC = signUpNameSB.instantiateViewController(withIdentifier: "SignUpNameVC") as? SignUpNameVC else {return}
-        
-        self.navigationController?.pushViewController(signUpNameVC, animated: true)
-    }
-    
+    //MARK: - Functions
     func setTargets() {
         [nameTextField, passwordTextField].forEach {
               $0?.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
@@ -45,6 +29,65 @@ class SignInVC: UIViewController {
     }
     
     @objc func textFieldDidChange(_ sender:Any?) -> Void {
-        loginButton.isEnabled = nameTextField.hasText && passwordTextField.hasText
+        signInButton.isEnabled = nameTextField.hasText && passwordTextField.hasText
+    }
+    
+    // MARK: - @IBAction Properties
+    @IBAction func signInButtonClicked(_ sender: UIButton) {
+        signIn()
+    }
+    
+    @IBAction func gotoSignUpClicked(_ sender: UIButton) {
+        let signUpNameSB = UIStoryboard(name: "SignUpName", bundle: nil)
+        guard let signUpNameVC = signUpNameSB.instantiateViewController(withIdentifier: SignUpNameVC.reuseIdentifier) as? SignUpNameVC else {return}
+        
+        self.navigationController?.pushViewController(signUpNameVC, animated: true)
+    }
+}
+
+// MARK: - Extensions
+extension SignInVC {
+    func signIn() {
+        
+        guard let name = nameTextField.text,
+              let password = passwordTextField.text
+        else { return }
+        
+        SignInService.shared.signIn(
+            name: name,
+            email: name,
+            password: password) { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? SignInResponse else { return }
+                print(data)
+                self.alert(message: data.message)
+            case .requestErr(let err):
+                print(err)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    
+    func alert(message: String) {
+        print("alert function")
+        let alertVC = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: { action in
+            self.okActionHandler()
+        })
+        alertVC.addAction(okAction)
+        present(alertVC, animated: true)
+    }
+    
+    func okActionHandler(){
+        var mainView: UIStoryboard!
+                  mainView = UIStoryboard(name: "TabBar", bundle: nil)
+        let tabBarController = mainView.instantiateViewController(withIdentifier: TabBarController.reuseIdentifier) as! UITabBarController
+        self.view.window?.rootViewController = tabBarController
     }
 }

@@ -7,16 +7,18 @@
 
 import UIKit
 
-class StoryCollectionViewCell: UICollectionViewCell {
-    static let identifier = "StoryCollectionViewCell"
+final class StoryCollectionViewCell: UICollectionViewCell {
     
+    // MARK: - Properties
     @IBOutlet weak var storyButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     
+    //MARK: - View Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
+    //MARK: - Functions
     func setData(_ storyData: StoryDataModel){
         storyButton.setImage(storyData.profileImage, for: .normal)
         nameLabel.text=storyData.userName
