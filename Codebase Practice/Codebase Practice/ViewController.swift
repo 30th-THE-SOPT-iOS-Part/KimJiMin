@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     /* [1단계] view 인스턴스 생성 및 프로퍼티 선언
      - 개인적으로, 일단 필요한 UIView 리스트업하듯이 선언 먼저 쭉 해두고 2단계 갔다가 3단계 하러 돌아오는 게 편한 것 같다.
      
-     [3단계] view별 UI 기초 설정.
+       [3단계] view별 UI 기초 설정.
      */
     private let logoImage = UIImageView().then{
         $0.image = UIImage(named: "Instagram Black Logo")
@@ -34,8 +34,8 @@ class ViewController: UIViewController {
     
     //TODO: - TextField 속성 겹치는 건 따로 파일 만들어 커스텀 클래스 만들어두기.
     /* Stack View 쓴 이유 :
-     1. leading, trailing, height constraints 코드 겹침
-     2. 둘 높이 같으니까 fillEqually로 하고 spacing, stackView 전체 높이만 설정해 주면 두 뷰의 높이는 알아서 동일하게 결정되게 만들면 편할 것 같아서
+       1. leading, trailing, height constraints 코드 겹침
+       2. 둘 높이 같으니까 fillEqually로 하고 spacing, stackView 전체 높이만 설정해 주면 두 뷰의 높이는 알아서 동일하게 결정되게 만들면 편할 것 같아서
      */
     private let emailTextField = UITextField().then{
         $0.placeholder = "전화번호, 사용자 이름 또는 이메일"
@@ -73,7 +73,10 @@ class ViewController: UIViewController {
     /* let 으로 쓰면 :
      Cannot use instance member 'signUpButton' within property initializer; property initializers run before 'self' is available
      */
-    // Stack View 쓴 이유 : 1. top constraints 코드 겹침 2. 나란히 정렬시키려고.
+    /* Stack View 쓴 이유 :
+       1. top constraints 코드 겹침.
+       2. 나란히 정렬시키려고.
+     */
     lazy var signUpStackView = UIStackView(arrangedSubviews: [signUpLabel, signUpButton]).then{
         $0.axis = .horizontal
         $0.distribution = .fillProportionally
@@ -94,7 +97,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureUI()
+        setLayout()
+        view.backgroundColor = .white
     }
 }
 
@@ -103,22 +107,17 @@ extension ViewController {
     /* [2단계] view 추가 및 제약 조건 설정
      - addSubviews extension 파일에 만들어서 사용
      - 뷰.snp.makeConstraints{
-     $0.방향.equalTo(기준).offset이나 inset(크기)
-     }
+            $0.방향.equalTo(기준).offset이나 inset(크기)
+        }
      */
-    private func configureUI() {
-        view.backgroundColor = .white
-        view.addSubviews([logoImage,
-//                          emailTextField, passwordTextField,
-                          textFieldStackView,
-                          passwordFinderButton, signInButton,
-//                          signUpLabel, signUpButton
-                          signUpStackView
-                         ])
+    private func setLayout() {
+        view.addSubviews([logoImage,textFieldStackView, passwordFinderButton, signInButton,signUpStackView])
         
         logoImage.snp.makeConstraints{
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(170)
             $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(100)
+            
+            // offset쓰고 음수 써도 되지만 양수로 통일하는 게 개인적으로 더 편한 것 같다.
             $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(100)
         }
         

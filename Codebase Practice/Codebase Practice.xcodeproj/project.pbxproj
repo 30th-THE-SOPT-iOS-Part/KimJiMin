@@ -64,17 +64,25 @@
 		4DE4A6352872F47E00AC7A50 /* Codebase Practice */ = {
 			isa = PBXGroup;
 			children = (
+				4DFCCFF82874A9E000CA3DD5 /* Extensions */,
 				4DE4A6362872F47E00AC7A50 /* AppDelegate.swift */,
 				4DE4A6382872F47E00AC7A50 /* SceneDelegate.swift */,
 				4DE4A63A2872F47E00AC7A50 /* ViewController.swift */,
-				4DE4A63F2872F48000AC7A50 /* Assets.xcassets */,
 				4DE4A6412872F48000AC7A50 /* LaunchScreen.storyboard */,
+				4DE4A63F2872F48000AC7A50 /* Assets.xcassets */,
 				4DE4A6442872F48000AC7A50 /* Info.plist */,
+			);
+			path = "Codebase Practice";
+			sourceTree = "<group>";
+		};
+		4DFCCFF82874A9E000CA3DD5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
 				4DAAFADD287405FF000E3CBA /* UIView+.swift */,
 				4DFCCFF42874316500CA3DD5 /* UITextField+.swift */,
 				4DFCCFF62874419000CA3DD5 /* UIStackView+.swift */,
 			);
-			path = "Codebase Practice";
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
