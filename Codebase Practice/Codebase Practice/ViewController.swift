@@ -26,7 +26,17 @@ class ViewController: UIViewController {
         $0.contentMode = .scaleAspectFit
     }
     
+    lazy var textFieldStackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField]).then{
+        $0.axis = .vertical
+        $0.distribution = .fillEqually
+        $0.spacing = 12
+    }
+    
     //TODO: - TextField 속성 겹치는 건 따로 파일 만들어 커스텀 클래스 만들어두기.
+    /* Stack View 쓴 이유 :
+     1. leading, trailing, height constraints 코드 겹침
+     2. 둘 높이 같으니까 fillEqually로 하고 spacing, stackView 전체 높이만 설정해 주면 두 뷰의 높이는 알아서 동일하게 결정되게 만들면 편할 것 같아서
+     */
     private let emailTextField = UITextField().then{
         $0.placeholder = "전화번호, 사용자 이름 또는 이메일"
         $0.font = UIFont.systemFont(ofSize: 14)
@@ -48,14 +58,14 @@ class ViewController: UIViewController {
     }
     
     private let passwordFinderButton = UIButton().then{
-        $0.setTitle("비밀번호를 잊으셨나요?", for: .normal)//여기까지만 쓰면 안 보임
-        $0.setTitleColor(.systemBlue, for: .normal)//여기까지 쓰면 보이기 시작
+        $0.setTitle("비밀번호를 잊으셨나요?", for: .normal)
+        $0.setTitleColor(.systemBlue, for: .normal)
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 10)
     }
     
     private let signInButton = UIButton().then{
-        $0.setTitle("로그인", for: .normal)//여기까지만 쓰면 안 보임
-        $0.backgroundColor = .systemBlue//여기까지 쓰면 보이기 시작
+        $0.setTitle("로그인", for: .normal)
+        $0.backgroundColor = .systemBlue
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         $0.layer.cornerRadius = 4
     }
@@ -63,6 +73,7 @@ class ViewController: UIViewController {
     /* let 으로 쓰면 :
      Cannot use instance member 'signUpButton' within property initializer; property initializers run before 'self' is available
      */
+    // Stack View 쓴 이유 : 1. top constraints 코드 겹침 2. 나란히 정렬시키려고.
     lazy var signUpStackView = UIStackView(arrangedSubviews: [signUpLabel, signUpButton]).then{
         $0.axis = .horizontal
         $0.distribution = .fillProportionally
@@ -97,7 +108,10 @@ extension ViewController {
      */
     private func configureUI() {
         view.backgroundColor = .white
-        view.addSubviews([logoImage, emailTextField, passwordTextField, passwordFinderButton, signInButton,
+        view.addSubviews([logoImage,
+//                          emailTextField, passwordTextField,
+                          textFieldStackView,
+                          passwordFinderButton, signInButton,
 //                          signUpLabel, signUpButton
                           signUpStackView
                          ])
@@ -108,18 +122,11 @@ extension ViewController {
             $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(100)
         }
         
-        emailTextField.snp.makeConstraints{
+        textFieldStackView.snp.makeConstraints{
             $0.top.equalTo(logoImage.snp.bottom).offset(34)
             $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(16)
             $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(16)
-            $0.height.equalTo(44)
-        }
-        
-        passwordTextField.snp.makeConstraints{
-            $0.top.equalTo(emailTextField.snp.bottom).offset(16)
-            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(16)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(16)
-            $0.height.equalTo(44)
+            $0.height.equalTo(96)
         }
         
         passwordFinderButton.snp.makeConstraints{
@@ -133,16 +140,6 @@ extension ViewController {
             $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(16)
             $0.height.equalTo(44)
         }
-        
-//        signUpLabel.snp.makeConstraints{
-//            $0.top.equalTo(signInButton.snp.bottom).offset(38)
-//            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(104)
-//        }
-//
-//        signUpButton.snp.makeConstraints{
-//            $0.top.equalTo(signInButton.snp.bottom).offset(38)
-//            $0.leading.equalTo(signUpLabel.snp.trailing).offset(5)
-//        }
         
         signUpStackView.snp.makeConstraints{
             $0.top.equalTo(signInButton.snp.bottom).offset(38)
