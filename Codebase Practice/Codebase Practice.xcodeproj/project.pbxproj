@@ -16,6 +16,7 @@
 		4DE4A6512873011100AC7A50 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE4A6502873011100AC7A50 /* Then */; };
 		4DFCCFF328740C0F00CA3DD5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4DFCCFF228740C0F00CA3DD5 /* SnapKit */; };
 		4DFCCFF52874316500CA3DD5 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFCCFF42874316500CA3DD5 /* UITextField+.swift */; };
+		4DFCCFF72874419000CA3DD5 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFCCFF62874419000CA3DD5 /* UIStackView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4DE4A6422872F48000AC7A50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DE4A6442872F48000AC7A50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DFCCFF42874316500CA3DD5 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		4DFCCFF62874419000CA3DD5 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				4DE4A6442872F48000AC7A50 /* Info.plist */,
 				4DAAFADD287405FF000E3CBA /* UIView+.swift */,
 				4DFCCFF42874316500CA3DD5 /* UITextField+.swift */,
+				4DFCCFF62874419000CA3DD5 /* UIStackView+.swift */,
 			);
 			path = "Codebase Practice";
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DAAFADE287405FF000E3CBA /* UIView+.swift in Sources */,
+				4DFCCFF72874419000CA3DD5 /* UIStackView+.swift in Sources */,
 				4DFCCFF52874316500CA3DD5 /* UITextField+.swift in Sources */,
 				4DE4A63B2872F47E00AC7A50 /* ViewController.swift in Sources */,
 				4DE4A6372872F47E00AC7A50 /* AppDelegate.swift in Sources */,

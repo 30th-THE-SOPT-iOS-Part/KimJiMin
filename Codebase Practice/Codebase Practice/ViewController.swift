@@ -8,18 +8,18 @@
 /* [0단계]
  - SceneDelegate, info.plist 설정
  - SnapKit, Then 설치 및 import
-*/
+ */
 
 import UIKit
 import SnapKit
 import Then
 
 class ViewController: UIViewController {
-
+    
     /* [1단계] view 인스턴스 생성 및 프로퍼티 선언
      - 개인적으로, 일단 필요한 UIView 리스트업하듯이 선언 먼저 쭉 해두고 2단계 갔다가 3단계 하러 돌아오는 게 편한 것 같다.
      
-       [3단계] view별 UI 기초 설정.
+     [3단계] view별 UI 기초 설정.
      */
     private let logoImage = UIImageView().then{
         $0.image = UIImage(named: "Instagram Black Logo")
@@ -60,17 +60,25 @@ class ViewController: UIViewController {
         $0.layer.cornerRadius = 4
     }
     
+    /* let 으로 쓰면 :
+     Cannot use instance member 'signUpButton' within property initializer; property initializers run before 'self' is available
+     */
+    lazy var signUpStackView = UIStackView(arrangedSubviews: [signUpLabel, signUpButton]).then{
+        $0.axis = .horizontal
+        $0.distribution = .fillProportionally
+    }
+    
     private let signUpLabel = UILabel().then{
         $0.text = "계정이 없으신가요?"
         $0.font = UIFont.systemFont(ofSize: 14)
         $0.textColor = .systemGray
+        $0.sizeToFit()
     }
     
     private let signUpButton = UIButton().then{
         $0.setTitle("가입하기", for: .normal)
         $0.setTitleColor(.systemBlue, for: .normal)
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-//        $0.backgroundColor = .systemGray
     }
     
     override func viewDidLoad() {
@@ -84,12 +92,15 @@ extension ViewController {
     /* [2단계] view 추가 및 제약 조건 설정
      - addSubviews extension 파일에 만들어서 사용
      - 뷰.snp.makeConstraints{
-            $0.방향.equalTo(기준).offset이나 inset(크기)
-       }
+     $0.방향.equalTo(기준).offset이나 inset(크기)
+     }
      */
     private func configureUI() {
         view.backgroundColor = .white
-        view.addSubviews([logoImage, emailTextField, passwordTextField, passwordFinderButton, signInButton, signUpLabel, signUpButton])
+        view.addSubviews([logoImage, emailTextField, passwordTextField, passwordFinderButton, signInButton,
+//                          signUpLabel, signUpButton
+                          signUpStackView
+                         ])
         
         logoImage.snp.makeConstraints{
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(170)
@@ -123,14 +134,20 @@ extension ViewController {
             $0.height.equalTo(44)
         }
         
-        signUpLabel.snp.makeConstraints{
+//        signUpLabel.snp.makeConstraints{
+//            $0.top.equalTo(signInButton.snp.bottom).offset(38)
+//            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(104)
+//        }
+//
+//        signUpButton.snp.makeConstraints{
+//            $0.top.equalTo(signInButton.snp.bottom).offset(38)
+//            $0.leading.equalTo(signUpLabel.snp.trailing).offset(5)
+//        }
+        
+        signUpStackView.snp.makeConstraints{
             $0.top.equalTo(signInButton.snp.bottom).offset(38)
             $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(104)
-        }
-        
-        signUpButton.snp.makeConstraints{
-            $0.top.equalTo(signInButton.snp.bottom).offset(38)
-            $0.leading.equalTo(signUpLabel.snp.trailing).offset(5)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(104)
         }
     }
     
