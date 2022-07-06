@@ -134,6 +134,4 @@ extension ViewController {
             $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(104)
         }
     }
-    
-    
 }

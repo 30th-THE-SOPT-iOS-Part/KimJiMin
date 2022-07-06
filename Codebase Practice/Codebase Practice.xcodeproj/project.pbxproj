@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D0B5EB32875747300AD4C59 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B5EB22875747300AD4C59 /* TextField.swift */; };
+		4D0B5EB52875812A00AD4C59 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B5EB42875812A00AD4C59 /* UIButton+.swift */; };
 		4DAAFADE287405FF000E3CBA /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAFADD287405FF000E3CBA /* UIView+.swift */; };
 		4DE4A6372872F47E00AC7A50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A6362872F47E00AC7A50 /* AppDelegate.swift */; };
 		4DE4A6392872F47E00AC7A50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A6382872F47E00AC7A50 /* SceneDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		4D0B5EB22875747300AD4C59 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		4D0B5EB42875812A00AD4C59 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		4DAAFADD287405FF000E3CBA /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		4DE4A6332872F47E00AC7A50 /* Codebase Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codebase Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE4A6362872F47E00AC7A50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				4DAAFADD287405FF000E3CBA /* UIView+.swift */,
 				4DFCCFF42874316500CA3DD5 /* UITextField+.swift */,
 				4DFCCFF62874419000CA3DD5 /* UIStackView+.swift */,
+				4D0B5EB42875812A00AD4C59 /* UIButton+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				4DE4A63B2872F47E00AC7A50 /* ViewController.swift in Sources */,
 				4DE4A6372872F47E00AC7A50 /* AppDelegate.swift in Sources */,
 				4DE4A6392872F47E00AC7A50 /* SceneDelegate.swift in Sources */,
+				4D0B5EB52875812A00AD4C59 /* UIButton+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
