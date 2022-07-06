@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0B5EB32875747300AD4C59 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B5EB22875747300AD4C59 /* TextField.swift */; };
 		4DAAFADE287405FF000E3CBA /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAFADD287405FF000E3CBA /* UIView+.swift */; };
 		4DE4A6372872F47E00AC7A50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A6362872F47E00AC7A50 /* AppDelegate.swift */; };
 		4DE4A6392872F47E00AC7A50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A6382872F47E00AC7A50 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D0B5EB22875747300AD4C59 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		4DAAFADD287405FF000E3CBA /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		4DE4A6332872F47E00AC7A50 /* Codebase Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codebase Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE4A6362872F47E00AC7A50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D0B5EB12875718600AD4C59 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4D0B5EB22875747300AD4C59 /* TextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		4DE4A62A2872F47E00AC7A50 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		4DE4A6352872F47E00AC7A50 /* Codebase Practice */ = {
 			isa = PBXGroup;
 			children = (
+				4D0B5EB12875718600AD4C59 /* Components */,
 				4DFCCFF82874A9E000CA3DD5 /* Extensions */,
 				4DE4A6362872F47E00AC7A50 /* AppDelegate.swift */,
 				4DE4A6382872F47E00AC7A50 /* SceneDelegate.swift */,
@@ -166,6 +177,7 @@
 				4DAAFADE287405FF000E3CBA /* UIView+.swift in Sources */,
 				4DFCCFF72874419000CA3DD5 /* UIStackView+.swift in Sources */,
 				4DFCCFF52874316500CA3DD5 /* UITextField+.swift in Sources */,
+				4D0B5EB32875747300AD4C59 /* TextField.swift in Sources */,
 				4DE4A63B2872F47E00AC7A50 /* ViewController.swift in Sources */,
 				4DE4A6372872F47E00AC7A50 /* AppDelegate.swift in Sources */,
 				4DE4A6392872F47E00AC7A50 /* SceneDelegate.swift in Sources */,

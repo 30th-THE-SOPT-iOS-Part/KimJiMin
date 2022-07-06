@@ -26,6 +26,10 @@ class ViewController: UIViewController {
         $0.contentMode = .scaleAspectFit
     }
     
+    /* Stack View 쓴 이유 :
+       1. leading, trailing, height constraints 코드 겹침
+       2. 둘 높이 같으니까 fillEqually로 하고 spacing, stackView 전체 높이만 설정해 주면 두 뷰의 높이는 알아서 동일하게 결정되게 만들면 편할 것 같아서
+     */
     lazy var textFieldStackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField]).then{
         $0.axis = .vertical
         $0.distribution = .fillEqually
@@ -33,28 +37,12 @@ class ViewController: UIViewController {
     }
     
     //TODO: - TextField 속성 겹치는 건 따로 파일 만들어 커스텀 클래스 만들어두기.
-    /* Stack View 쓴 이유 :
-       1. leading, trailing, height constraints 코드 겹침
-       2. 둘 높이 같으니까 fillEqually로 하고 spacing, stackView 전체 높이만 설정해 주면 두 뷰의 높이는 알아서 동일하게 결정되게 만들면 편할 것 같아서
-     */
-    private let emailTextField = UITextField().then{
+    private let emailTextField = TextField().then{
         $0.placeholder = "전화번호, 사용자 이름 또는 이메일"
-        $0.font = UIFont.systemFont(ofSize: 14)
-        $0.backgroundColor = .systemGray6
-        $0.layer.cornerRadius = 4
-        $0.layer.borderColor = UIColor.systemGray5.cgColor
-        $0.layer.borderWidth = 1
-        $0.addLeftPadding(10)
     }
     
-    private let passwordTextField = UITextField().then{
+    private let passwordTextField = TextField().then{
         $0.placeholder = "비밀번호"
-        $0.font = UIFont.systemFont(ofSize: 14)
-        $0.backgroundColor = .systemGray6
-        $0.layer.cornerRadius = 4
-        $0.layer.borderColor = UIColor.systemGray5.cgColor
-        $0.layer.borderWidth = 1
-        $0.addLeftPadding(10)
     }
     
     private let passwordFinderButton = UIButton().then{
