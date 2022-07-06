@@ -87,7 +87,26 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setLayout()
         view.backgroundColor = .white
+        setDidTapSignInButton()
     }
+    
+    private func setDidTapSignInButton(){
+        signInButton.press {[weak self] in
+            print("~~")
+            let alertController = UIAlertController(title: "로그인 완료😺", message: nil, preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default, handler: { action in
+                        self?.okActionHandler()
+                    })
+            alertController.addAction(okAction)
+            self?.present(alertController, animated: true)
+        }
+    }
+    
+    private func okActionHandler(){
+            guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
+            self.view.window?.rootViewController?.dismiss(animated: false){
+                       presentingVC.popToRootViewController(animated: true)}
+        }
 }
 
 extension ViewController {
