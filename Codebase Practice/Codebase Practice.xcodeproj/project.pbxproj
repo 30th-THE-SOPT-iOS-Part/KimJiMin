@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4D0B5EB32875747300AD4C59 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B5EB22875747300AD4C59 /* TextField.swift */; };
 		4D0B5EB52875812A00AD4C59 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B5EB42875812A00AD4C59 /* UIButton+.swift */; };
+		4DA9C3492876A75600229CF0 /* UIViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C3482876A75600229CF0 /* UIViewPreview.swift */; };
+		4DA9C34B2876A86C00229CF0 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C34A2876A86C00229CF0 /* UIViewController+.swift */; };
 		4DAAFADE287405FF000E3CBA /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAFADD287405FF000E3CBA /* UIView+.swift */; };
 		4DE4A6372872F47E00AC7A50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A6362872F47E00AC7A50 /* AppDelegate.swift */; };
 		4DE4A6392872F47E00AC7A50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A6382872F47E00AC7A50 /* SceneDelegate.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		4D0B5EB22875747300AD4C59 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		4D0B5EB42875812A00AD4C59 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		4DA9C3482876A75600229CF0 /* UIViewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewPreview.swift; sourceTree = "<group>"; };
+		4DA9C34A2876A86C00229CF0 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		4DAAFADD287405FF000E3CBA /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		4DE4A6332872F47E00AC7A50 /* Codebase Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codebase Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE4A6362872F47E00AC7A50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 				4DFCCFF82874A9E000CA3DD5 /* Extensions */,
 				4DE4A6362872F47E00AC7A50 /* AppDelegate.swift */,
 				4DE4A6382872F47E00AC7A50 /* SceneDelegate.swift */,
+				4DA9C3482876A75600229CF0 /* UIViewPreview.swift */,
 				4DE4A63A2872F47E00AC7A50 /* ViewController.swift */,
 				4DE4A6412872F48000AC7A50 /* LaunchScreen.storyboard */,
 				4DE4A63F2872F48000AC7A50 /* Assets.xcassets */,
@@ -93,6 +98,7 @@
 			children = (
 				4DAAFADD287405FF000E3CBA /* UIView+.swift */,
 				4DFCCFF42874316500CA3DD5 /* UITextField+.swift */,
+				4DA9C34A2876A86C00229CF0 /* UIViewController+.swift */,
 				4DFCCFF62874419000CA3DD5 /* UIStackView+.swift */,
 				4D0B5EB42875812A00AD4C59 /* UIButton+.swift */,
 			);
@@ -179,9 +185,11 @@
 			files = (
 				4DAAFADE287405FF000E3CBA /* UIView+.swift in Sources */,
 				4DFCCFF72874419000CA3DD5 /* UIStackView+.swift in Sources */,
+				4DA9C34B2876A86C00229CF0 /* UIViewController+.swift in Sources */,
 				4DFCCFF52874316500CA3DD5 /* UITextField+.swift in Sources */,
 				4D0B5EB32875747300AD4C59 /* TextField.swift in Sources */,
 				4DE4A63B2872F47E00AC7A50 /* ViewController.swift in Sources */,
+				4DA9C3492876A75600229CF0 /* UIViewPreview.swift in Sources */,
 				4DE4A6372872F47E00AC7A50 /* AppDelegate.swift in Sources */,
 				4DE4A6392872F47E00AC7A50 /* SceneDelegate.swift in Sources */,
 				4D0B5EB52875812A00AD4C59 /* UIButton+.swift in Sources */,

@@ -149,8 +149,18 @@ extension ViewController {
         
         signUpStackView.snp.makeConstraints{
             $0.top.equalTo(signInButton.snp.bottom).offset(38)
-            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(104)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(104)
+            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(100)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(100)
         }
     }
 }
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+
+struct ViewController_Preview: PreviewProvider {
+    static var previews: some View {
+        ViewController().showPreview()
+    }
+}
+#endif

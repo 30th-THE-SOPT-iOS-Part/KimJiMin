@@ -31,6 +31,20 @@ class TextField: UITextField{
     }
 }
 
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+
+struct TextFieldPreview: PreviewProvider{
+    static var previews: some View {
+        UIViewPreview {
+            let textField = TextField(frame: .zero)
+            textField.placeholder = "placeholder"
+            return textField
+        }
+    }
+}
+#endif
+
 /* [주석-1]
  
  🙋🏻‍♀️ init(frame: CGRect)
